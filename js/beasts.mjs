@@ -119,11 +119,9 @@ const getBeastSubsections = (beasts, redBeasts, message) => {
     beastRegexes.join("|"),
     "```",
     "",
-    "<details><summary> Beast Prices </summary>",
-    "| Beast | Price (c) |",
-    "| :- | -: |",
-    ...beasts.map((b) => `|${b.name}|${b.chaosValue}|`),
-    "</details>",
+    "<details><summary> Beast Prices </summary><ul>",
+    ...beasts.map((b) => `<li>${b.name}: ${b.chaosValue}c</li>`),
+    "</ul></details>",
   );
 
   return tempLines;
