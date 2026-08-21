@@ -1,7 +1,7 @@
 
 # merclab
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/skill-gems), fetched at Fri Aug 21 2026 23:49:21 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/skill-gems), fetched at Fri Aug 21 2026 23:51:24 GMT+1200 (New Zealand Standard Time)
 
 The following prices are for gem level < 20 and quality < 20
 
@@ -208,7 +208,7 @@ Average | 28.9c | -
 
 # Beasts
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Fri Aug 21 2026 23:49:21 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Fri Aug 21 2026 23:51:24 GMT+1200 (New Zealand Standard Time)
 
 Yellow Beasts: 3c
 
@@ -219,26 +219,24 @@ Yellow Beasts: 3c
 ck m|cic c|l pl|bris|arru|ld h|numu|l cy|bleb|qawa|l cr|id v|aice|id w|c ti|cic m
 ```
 
-<details><summary> Beast Prices </summary>
-| Beast | Price (c) |
-| :- | -: |
-|Black Mórrigan|215|
-|Craicic Croaker|120|
-|Fenumal Plagued Arachnid|110|
-|Wild Bristle Matron|84|
-|Farrul, First of the Plains|35.1|
-|Wild Hellion Alpha|35|
-|Fenumus, First of the Night|28.4|
-|Primal Cystcaller|25|
-|Wild Brambleback|24|
-|Saqawal, First of the Sky|20|
-|Primal Crushclaw|19|
-|Vivid Vulture|17|
-|Craiceann, First of the Deep|15|
-|Vivid Watcher|6|
-|Farric Tiger Alpha|5|
-|Craicic Maw|3|
-</details>
+<details><summary> Beast Prices </summary><ul>
+<li>Black Mórrigan: 215c</li>
+<li>Craicic Croaker: 120c</li>
+<li>Fenumal Plagued Arachnid: 110c</li>
+<li>Wild Bristle Matron: 84c</li>
+<li>Farrul, First of the Plains: 35.1c</li>
+<li>Wild Hellion Alpha: 35c</li>
+<li>Fenumus, First of the Night: 28.4c</li>
+<li>Primal Cystcaller: 25c</li>
+<li>Wild Brambleback: 24c</li>
+<li>Saqawal, First of the Sky: 20c</li>
+<li>Primal Crushclaw: 19c</li>
+<li>Vivid Vulture: 17c</li>
+<li>Craiceann, First of the Deep: 15c</li>
+<li>Vivid Watcher: 6c</li>
+<li>Farric Tiger Alpha: 5c</li>
+<li>Craicic Maw: 3c</li>
+</ul></details>
 
 ## Borderline (1.5c+)
 
@@ -246,15 +244,13 @@ ck m|cic c|l pl|bris|arru|ld h|numu|l cy|bleb|qawa|l cr|id v|aice|id w|c ti|cic 
 ic v|ic l|al h|c wo|c sq
 ```
 
-<details><summary> Beast Prices </summary>
-| Beast | Price (c) |
-| :- | -: |
-|Craicic Vassal|2|
-|Farric Lynx Alpha|2|
-|Fenumal Hybrid Arachnid|2|
-|Farric Wolf Alpha|2|
-|Craicic Squid|2|
-</details>
+<details><summary> Beast Prices </summary><ul>
+<li>Craicic Vassal: 2c</li>
+<li>Farric Lynx Alpha: 2c</li>
+<li>Fenumal Hybrid Arachnid: 2c</li>
+<li>Farric Wolf Alpha: 2c</li>
+<li>Craicic Squid: 2c</li>
+</ul></details>
 
 ## Trash (under 1.5c)
 
@@ -266,40 +262,38 @@ ic u|c sav|e vu|c fr|al q|c gol|c ga|mal d|c wa|ne ch|magm|e rhe|c sh|c san|al w
 c pi|c fl|c ch|ne re|ic a|c sp|c goa|ne b|l scr|d ab|ex m|c ta
 ```
 
-<details><summary> Beast Prices </summary>
-| Beast | Price (c) |
-| :- | -: |
-|Farric Ursa|1|
-|Craicic Savage Crab|1|
-|Saqawine Vulture|1|
-|Farric Frost Hellion Alpha|1|
-|Fenumal Queen|1|
-|Farric Goliath|1|
-|Farric Gargantuan|1|
-|Fenumal Devourer|1|
-|Craicic Watcher|1|
-|Saqawine Chimeral|1|
-|Farric Magma Hound|1|
-|Saqawine Rhex|1|
-|Craicic Shield Crab|1|
-|Craicic Sand Spitter|1|
-|Fenumal Widow|1|
-|Saqawine Rhoa|1|
-|Saqawine Cobra|1|
-|Fenumal Scorpion|1|
-|Farric Pit Hound|1|
-|Farric Flame Hellion Alpha|1|
-|Farric Chieftain|1|
-|Saqawine Retch|1|
-|Farric Ape|1|
-|Craicic Spider Crab|1|
-|Farric Goatman|1|
-|Saqawine Blood Viper|1|
-|Fenumal Scrabbler|1|
-|Vivid Abberarach|1|
-|Primal Rhex Matriarch|1|
-|Farric Taurus|0.52|
-</details>
+<details><summary> Beast Prices </summary><ul>
+<li>Farric Ursa: 1c</li>
+<li>Craicic Savage Crab: 1c</li>
+<li>Saqawine Vulture: 1c</li>
+<li>Farric Frost Hellion Alpha: 1c</li>
+<li>Fenumal Queen: 1c</li>
+<li>Farric Goliath: 1c</li>
+<li>Farric Gargantuan: 1c</li>
+<li>Fenumal Devourer: 1c</li>
+<li>Craicic Watcher: 1c</li>
+<li>Saqawine Chimeral: 1c</li>
+<li>Farric Magma Hound: 1c</li>
+<li>Saqawine Rhex: 1c</li>
+<li>Craicic Shield Crab: 1c</li>
+<li>Craicic Sand Spitter: 1c</li>
+<li>Fenumal Widow: 1c</li>
+<li>Saqawine Rhoa: 1c</li>
+<li>Saqawine Cobra: 1c</li>
+<li>Fenumal Scorpion: 1c</li>
+<li>Farric Pit Hound: 1c</li>
+<li>Farric Flame Hellion Alpha: 1c</li>
+<li>Farric Chieftain: 1c</li>
+<li>Saqawine Retch: 1c</li>
+<li>Farric Ape: 1c</li>
+<li>Craicic Spider Crab: 1c</li>
+<li>Farric Goatman: 1c</li>
+<li>Saqawine Blood Viper: 1c</li>
+<li>Fenumal Scrabbler: 1c</li>
+<li>Vivid Abberarach: 1c</li>
+<li>Primal Rhex Matriarch: 1c</li>
+<li>Farric Taurus: 0.52c</li>
+</ul></details>
 
 # poe-economy
 
