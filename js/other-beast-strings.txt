@@ -1,2 +1,7 @@
 Bilefur
 Craicic Presence
+Minions Fire Explode on Death
+Temporal Proximity Shield
+Extra Chaos Damage
+Chilled Ground on Death
+Fire and Ignite Resistant

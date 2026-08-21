@@ -125,7 +125,7 @@
   },
   {
     "beast": "Fenumal Plagued Arachnid",
-    "regex": "al p"
+    "regex": "l pl"
   },
   {
     "beast": "Fenumal Scrabbler",
@@ -153,7 +153,7 @@
   },
   {
     "beast": "Saqawine Retch",
-    "regex": "e re"
+    "regex": "ne re"
   },
   {
     "beast": "Saqawine Rhoa",

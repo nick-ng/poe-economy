@@ -55,7 +55,6 @@ const getBeastsJson = async (beastNames) => {
   }
 
   const allBeastStrings = beastNames.concat(otherBeastStrings);
-  console.log(allBeastStrings);
   const redBeasts = redBeastNames.map((n) => {
     const lowerCaseName = n.toLowerCase();
     if (!beastNames.includes(n)) {
