@@ -8,14 +8,15 @@ const lines = [];
 // this is designed to be run from the repo's root with `node ./js/beasts.mjs`
 const BEASTS_JSON_PATH = join("js", "generated", "beasts.json");
 const RED_BEASTS_TXT_PATH = join("js", "red-beasts.txt");
+const OTHER_BEASTS_TXT_PATH = join("js", "other-beast-strings.txt");
 
 const getBeastsJson = async (beastNames) => {
   try {
-    const temp = await readFile(BEASTS_JSON_PATH, { encoding: "utf8" });
-
-    if (temp.length > 0) {
-      return JSON.parse(temp);
-    }
+    // const temp = await readFile(BEASTS_JSON_PATH, { encoding: "utf8" });
+    //
+    // if (temp.length > 0) {
+    //   return JSON.parse(temp);
+    // }
   } catch (e) {
     if (e.code !== "ENOENT") {
       console.error("error reading beast info", e);
@@ -31,13 +32,30 @@ const getBeastsJson = async (beastNames) => {
       encoding: "utf8",
     });
 
-    redBeastNames = redBeastsRaw.split("\n").filter((a) => a.trim());
+    redBeastNames = redBeastsRaw.split("\n").map((a) => a.trim()).filter((a) =>
+      a
+    );
   } catch (e) {
     console.error("error reading red beasts", e);
 
     return {};
   }
 
+  let otherBeastStrings = [];
+  try {
+    const otherBeastsRaw = await readFile(OTHER_BEASTS_TXT_PATH, {
+      encoding: "utf8",
+    });
+
+    otherBeastStrings = otherBeastsRaw.split("\n").map((a) => a.trim()).filter(
+      (a) => a,
+    );
+  } catch (e) {
+    console.error("error reading other beasts strings", e);
+  }
+
+  const allBeastStrings = beastNames.concat(otherBeastStrings);
+  console.log(allBeastStrings);
   const redBeasts = redBeastNames.map((n) => {
     const lowerCaseName = n.toLowerCase();
     if (!beastNames.includes(n)) {
@@ -52,7 +70,7 @@ const getBeastsJson = async (beastNames) => {
       for (let end = start + 1; end < n.length; end++) {
         const subStr = lowerCaseName.slice(start, end + 1);
         if (
-          !beastNames.some((bn) => {
+          !allBeastStrings.some((bn) => {
             const beastNameLowerCase = bn.toLowerCase();
             return beastNameLowerCase !== lowerCaseName &&
               beastNameLowerCase.includes(subStr);
@@ -72,6 +90,8 @@ const getBeastsJson = async (beastNames) => {
   }).filter((a) => a);
 
   writeFile(BEASTS_JSON_PATH, JSON.stringify(redBeasts, null, 2));
+
+  return redBeasts;
 };
 
 const getBeastRegexes = (beasts, redBeasts, message) => {
