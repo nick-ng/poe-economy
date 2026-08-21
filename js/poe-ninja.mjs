@@ -7,7 +7,6 @@ const POE_NINJA_URL = "https://poe.ninja";
  */
 export async function getLeague() {
   const url = [POE_NINJA_URL, "poe1", "api", "data", "index-state"].join("/");
-  console.log("getLeague url", url);
   const res = await fetch(url);
   let resText = await res.text();
   let resJson = {};

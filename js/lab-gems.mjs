@@ -305,14 +305,6 @@ const COLOUR_EMOJIS = {
 };
 
 const lines = [];
-const addLine = (line) => {
-  // console.info(line);
-  lines.push(line);
-};
-
-const saveLines = async () => {
-  return writeFile(join("md-fragments", "LAB_GEMS.md"), lines.join("\n"));
-};
 
 const getGems = async (leagueName) => {
   const resJson = await fetchPoeNinjaItems(leagueName, "SkillGem");
@@ -329,7 +321,7 @@ const getGems = async (leagueName) => {
 
 const main = async () => {
   try {
-    addLine("# merclab\n");
+    lines.push("# merclab\n");
     const league = await getLeague();
     const gems = await getGems(league.name);
     const labGems = gems.filter((gem) => {
@@ -348,12 +340,12 @@ const main = async () => {
       return true;
     });
 
-    addLine(
-      `[${league.name} League](https://poe.ninja/economy/${league.url}/skill-gems), fetched at ${new Date()}`,
+    lines.push(
+      `[${league.name} League](https://poe.ninja/poe1/economy/${league.url}/skill-gems), fetched at ${new Date()}`,
     );
-    addLine("");
-    addLine("The following prices are for gem level < 20 and quality < 20");
-    addLine("");
+    lines.push("");
+    lines.push("The following prices are for gem level < 20 and quality < 20");
+    lines.push("");
 
     const gemInfo = { red: [], green: [], blue: [], white: [] };
     SKILL_GEMS.forEach((g) => {
@@ -452,16 +444,16 @@ const main = async () => {
 
     randomSameColour.sort((a, b) => b.ev - a.ev);
     const sameColourEv = randomSameColour[0].ev;
-    addLine(
+    lines.push(
       `## Transform a Skill Gem to be a random Transfigured Gem of the same colour - ${
         sameColourEv.toFixed(
           1,
         )
       }c`,
     );
-    addLine("");
-    addLine("Colour | Top 5 | EV");
-    addLine(":- | :- | -:");
+    lines.push("");
+    lines.push("Colour | Top 5 | EV");
+    lines.push(":- | :- | -:");
     randomSameColour.forEach((a) => {
       const gemLinks = a.top5
         .map(
@@ -477,7 +469,7 @@ const main = async () => {
             })`,
         )
         .join(", ");
-      addLine(
+      lines.push(
         [
           `${COLOUR_EMOJIS[a.colour]} ${a.colour}`,
           gemLinks,
@@ -486,14 +478,14 @@ const main = async () => {
       );
     });
 
-    addLine("");
+    lines.push("");
 
     sameGemPrices.sort((a, b) => {
       return b.ev - a.ev;
     });
 
     const sameGemEv = sameGemPrices[0].ev;
-    addLine(
+    lines.push(
       `## Transform a non-Transfigured Skill Gem to a Transfigured version - ${
         sameGemEv.toFixed(
           1,
@@ -501,8 +493,8 @@ const main = async () => {
       }c`,
     );
 
-    addLine("Normal Gem | # | Transfigured Gems | EV");
-    addLine(" :- | -: | :- | -: ");
+    lines.push("Normal Gem | # | Transfigured Gems | EV");
+    lines.push(" :- | -: | :- | -: ");
     sameGemPrices.slice(0, 10).map((g) => {
       const transfiguredLinks = g.transfigured
         .map(
@@ -519,7 +511,7 @@ const main = async () => {
         )
         .join(", ");
 
-      addLine(
+      lines.push(
         [
           `[${g.normal.name}](https://www.poewiki.net/wiki/${
             g.normal.name.replaceAll(" ", "_")
@@ -531,21 +523,21 @@ const main = async () => {
       );
     });
 
-    addLine("");
-    addLine("<details><summary> All Gems </summary>");
-    addLine("");
-    addLine("```");
+    lines.push("");
+    lines.push("<details><summary> All Gems </summary>");
+    lines.push("");
+    lines.push("```");
     sameGemPrices.forEach((g) => {
-      addLine(
+      lines.push(
         `- ${g.ev.toFixed(1)} ${g.normal.name} (${g.transfigured.length}, ${
           g.transfigured.map((t) => t.name).join(", ")
         })`,
       );
     });
-    addLine("```");
-    addLine("");
-    addLine("</details>");
-    addLine("");
+    lines.push("```");
+    lines.push("");
+    lines.push("</details>");
+    lines.push("");
 
     const exceptionalPrices = gems
       .filter(
@@ -561,18 +553,18 @@ const main = async () => {
       (prev, curr, _, arr) => prev + curr.chaosValue / arr.length,
       0,
     );
-    addLine(
+    lines.push(
       `## Exchange a Support Gem for a random Exceptional Gem - ${
         exceptionalEv.toFixed(
           1,
         )
       }c`,
     );
-    addLine("");
-    addLine("Exceptional Gem | Price");
-    addLine(" :- | -: ");
+    lines.push("");
+    lines.push("Exceptional Gem | Price");
+    lines.push(" :- | -: ");
     exceptionalPrices.forEach((gem) => {
-      addLine(
+      lines.push(
         [
           `[${gem.name}](${
             [
@@ -587,40 +579,40 @@ const main = async () => {
         ].join(" | "),
       );
     });
-    addLine(["Average", `${exceptionalEv.toFixed(1)}c`].join(" | "));
+    lines.push(["Average", `${exceptionalEv.toFixed(1)}c`].join(" | "));
 
-    addLine("");
+    lines.push("");
 
     const labEv = sameColourEv * (1 - 0.085) + sameGemEv * 0.06 +
       exceptionalEv * 0.025;
-    addLine(`## Expected Value per Lab: ${labEv.toFixed(1)}c`);
-    addLine("");
-    addLine("Divine Font | EV | Appearance Rate");
-    addLine(" :- | -: | -: ");
-    addLine(
+    lines.push(`## Expected Value per Lab: ${labEv.toFixed(1)}c`);
+    lines.push("");
+    lines.push("Divine Font | EV | Appearance Rate");
+    lines.push(" :- | -: | -: ");
+    lines.push(
       `Transform a Skill Gem to be a random Transfigured Gem of the same colour | ${
         sameColourEv.toFixed(
           1,
         )
       }c | 100.0%`,
     );
-    addLine(
+    lines.push(
       `Transform a non-Transfigured Skill Gem to be a random Transfigured version | ${
         sameGemEv.toFixed(
           1,
         )
       }c | 6.0%`,
     );
-    addLine(
+    lines.push(
       `Exchange a Support Gem for a random Exceptional Gem | ${
         exceptionalEv.toFixed(
           1,
         )
       }c | 2.5%`,
     );
-    addLine(`Average | ${labEv.toFixed(1)}c | -`);
+    lines.push(`Average | ${labEv.toFixed(1)}c | -`);
 
-    await saveLines();
+    await writeFile(join("md-fragments", "LAB_GEMS.md"), lines.join("\n"));
   } catch (e) {
     console.error("Error getting lab gems", e);
   }

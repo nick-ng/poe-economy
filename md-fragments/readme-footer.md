@@ -1,4 +1,6 @@
-# "Program" Notes
+# poe-economy
+
+Get price data from poe.ninja and display it differently
 
 ## Requirements
 
