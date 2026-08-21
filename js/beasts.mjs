@@ -93,7 +93,7 @@ const getBeastsJson = async (beastNames) => {
   return redBeasts;
 };
 
-const getBeastRegexes = (beasts, redBeasts, message) => {
+const getBeastSubsections = (beasts, redBeasts, message) => {
   if (beasts.length === 0) {
     return [];
   }
@@ -114,7 +114,17 @@ const getBeastRegexes = (beasts, redBeasts, message) => {
     }
   }
 
-  tempLines.push("```", beastRegexes.join("|"), "```");
+  tempLines.push(
+    "```",
+    beastRegexes.join("|"),
+    "```",
+    "",
+    "<details><summary> Beast Prices </summary>",
+    "| Beast | Price (c) |",
+    "| :- | -: |",
+    ...beasts.map((b) => `|${b.name}|${b.chaosValue}|`),
+    "</details>",
+  );
 
   return tempLines;
 };
@@ -158,29 +168,29 @@ const main = async () => {
     r.chaosValue >= yellowBeastMedian
   );
 
-  lines.push(...getBeastRegexes(
+  lines.push(...getBeastSubsections(
     expensiveBeasts,
     redBeasts,
-    `\nKeep (${yellowBeastMedian}c+)`,
+    `\n## Keep (${yellowBeastMedian}c+)`,
   ));
 
   const borderlineBeasts = redBeastPrices.filter((r) =>
     r.chaosValue < yellowBeastMedian && r.chaosValue >= yellowBeastMedian / 2
   );
 
-  lines.push(...getBeastRegexes(
+  lines.push(...getBeastSubsections(
     borderlineBeasts,
     redBeasts,
-    `\nBorderline (${yellowBeastMedian / 2}c+)`,
+    `\n## Borderline (${yellowBeastMedian / 2}c+)`,
   ));
 
   const cheapBeasts = redBeastPrices.filter((r) =>
     r.chaosValue < yellowBeastMedian / 2
   );
-  lines.push(...getBeastRegexes(
+  lines.push(...getBeastSubsections(
     cheapBeasts,
     redBeasts,
-    `\nTrash (under ${yellowBeastMedian / 2}c)`,
+    `\n## Trash (under ${yellowBeastMedian / 2}c)`,
   ));
 
   await writeFile(join("md-fragments", "BEASTS.md"), lines.join("\n"));
