@@ -4,11 +4,15 @@ Caustic Orb on Death
 Charge Removal
 Chilled Ground on Death
 Craicic Presence
+Crush on Hit
 Elemental Equilibrium and Random Elemental Damage
 Extra Chaos Damage
+Extra Cold Damage and Exposure
 Fire and Ignite Resistant
 Grimstink
 Hasted
 Minions Fire Explode on Death
+Shaggybrute
+Spectral Swipe
 Temporal Proximity Shield
 Tiger Prey
