@@ -2,6 +2,8 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+echo "update started at $(date)"
+
 mkdir -p temp
 
 echo "" > README.md
@@ -22,3 +24,5 @@ git add ./md-fragments/
 git add README.md
 git commit -m "chore: auto update - $(date)"
 git push
+
+echo "update ended at $(date)"
