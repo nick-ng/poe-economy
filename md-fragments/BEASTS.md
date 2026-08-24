@@ -1,6 +1,6 @@
 # Beasts
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Mon Aug 24 2026 21:41:11 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Tue Aug 25 2026 00:30:01 GMT+1200 (New Zealand Standard Time)
 
 Yellow Beasts: 2c
 
@@ -8,7 +8,7 @@ Yellow Beasts: 2c
 ## Keep (2c+)
 
 ```
-ck m|cic c|bris|l pl|ld h|bleb|arru|numu|l cy|l cr|id v|aice|qawa|c ti|cic m|c sq|id w|ic v|ic l
+ck m|l pl|cic c|bris|ld h|bleb|l cy|arru|numu|l cr|id v|aice|qawa|cic m|c ti|c sq|id w|ic v|ic l
 ```
 
 ```
@@ -16,21 +16,21 @@ al h|lf a
 ```
 
 <details><summary> Beast Prices </summary><ul>
-<li>Black Mórrigan: 325c</li>
-<li>Craicic Croaker: 140c</li>
-<li>Wild Bristle Matron: 117.2c</li>
-<li>Fenumal Plagued Arachnid: 114c</li>
-<li>Wild Hellion Alpha: 51.7c</li>
-<li>Wild Brambleback: 43c</li>
+<li>Black Mórrigan: 319c</li>
+<li>Fenumal Plagued Arachnid: 169c</li>
+<li>Craicic Croaker: 125.4c</li>
+<li>Wild Bristle Matron: 114.9c</li>
+<li>Wild Hellion Alpha: 48c</li>
+<li>Wild Brambleback: 42c</li>
+<li>Primal Cystcaller: 37c</li>
 <li>Farrul, First of the Plains: 30c</li>
 <li>Fenumus, First of the Night: 30c</li>
-<li>Primal Cystcaller: 30c</li>
-<li>Primal Crushclaw: 28.3c</li>
-<li>Vivid Vulture: 22c</li>
-<li>Craiceann, First of the Deep: 19.7c</li>
+<li>Primal Crushclaw: 21c</li>
+<li>Vivid Vulture: 20.3c</li>
+<li>Craiceann, First of the Deep: 19c</li>
 <li>Saqawal, First of the Sky: 15c</li>
+<li>Craicic Maw: 6.9c</li>
 <li>Farric Tiger Alpha: 5c</li>
-<li>Craicic Maw: 4.9c</li>
 <li>Craicic Squid: 4c</li>
 <li>Vivid Watcher: 4c</li>
 <li>Craicic Vassal: 3c</li>
