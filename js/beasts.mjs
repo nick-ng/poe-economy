@@ -160,35 +160,43 @@ const main = async () => {
   const yellowBeastMedian =
     yellowBeastsPrices[Math.floor(yellowBeastsPrices.length / 2)].chaosValue;
 
+  const redBeastThresholdUpper = yellowBeastMedian * 2;
+  const redBeastThresholdLower = yellowBeastMedian;
+
   lines.push(`Yellow Beasts: ${yellowBeastMedian}c`, "");
 
   const expensiveBeasts = redBeastPrices.filter((r) =>
-    r.chaosValue >= yellowBeastMedian
+    r.chaosValue >= redBeastThresholdUpper
   );
 
   lines.push(...getBeastSubsections(
     expensiveBeasts,
     redBeasts,
-    `\n## Keep (${yellowBeastMedian}c+)`,
+    `\n## Keep (${expensiveBeasts[expensiveBeasts.length - 1].chaosValue}c - ${
+      expensiveBeasts[0].chaosValue
+    }c)`,
   ));
 
   const borderlineBeasts = redBeastPrices.filter((r) =>
-    r.chaosValue < yellowBeastMedian && r.chaosValue >= yellowBeastMedian / 2
+    r.chaosValue < redBeastThresholdUpper &&
+    r.chaosValue >= redBeastThresholdLower
   );
 
   lines.push(...getBeastSubsections(
     borderlineBeasts,
     redBeasts,
-    `\n## Borderline (${yellowBeastMedian / 2}c+)`,
+    `\n## Borderline (${
+      borderlineBeasts[borderlineBeasts.length - 1].chaosValue
+    } - ${borderlineBeasts[0].chaosValue}c)`,
   ));
 
   const cheapBeasts = redBeastPrices.filter((r) =>
-    r.chaosValue < yellowBeastMedian / 2
+    r.chaosValue < redBeastThresholdLower
   );
   lines.push(...getBeastSubsections(
     cheapBeasts,
     redBeasts,
-    `\n## Trash (under ${yellowBeastMedian / 2}c)`,
+    `\n## Trash (under ${redBeastThresholdLower}c)`,
   ));
 
   await writeFile(join("md-fragments", "BEASTS.md"), lines.join("\n"));
