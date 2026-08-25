@@ -1,18 +1,31 @@
 Applies Random Mark
 Bilefur
+Burns Ground on Death
 Caustic Orb on Death
 Charge Removal
 Chilled Ground on Death
 Craicic Presence
 Crush on Hit
+Darkrender
 Elemental Equilibrium and Random Elemental Damage
 Extra Chaos Damage
 Extra Cold Damage and Exposure
+Extra Fire Damage and Exposure
+Extra Life
+Family: The Wilds
 Fire and Ignite Resistant
+Genus: Hellions
+Grayhowl the Stalker
 Grimstink
+Group: Felines
 Hasted
+Item Level:
+Lightning and Shock Resistant
 Minions Fire Explode on Death
+Satyr Storm
+Shackled Hellion
 Shaggybrute
 Spectral Swipe
+Swiftmuzzle
 Temporal Proximity Shield
 Tiger Prey

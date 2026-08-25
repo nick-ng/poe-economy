@@ -1,6 +1,6 @@
 # Beasts
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Wed Aug 26 2026 00:56:46 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Wed Aug 26 2026 01:07:25 GMT+1200 (New Zealand Standard Time)
 
 Yellow Beasts: 2c
 
@@ -8,7 +8,7 @@ Yellow Beasts: 2c
 ## Keep (4c - 315c)
 
 ```
-k m|cic c|l pl|tl|ld h|leb|e p|umu|cy|id v|hc|awa|ep|d w|r a|sq
+ck m|cic c|l pl|bris|ld h|bleb|arru|numu|l cy|id v|l cr|qawa|aice|id w|c ti|c sq
 ```
 
 <details><summary> Beast Prices </summary><ul>
@@ -33,7 +33,7 @@ k m|cic c|l pl|tl|ld h|leb|e p|umu|cy|id v|hc|awa|ep|d w|r a|sq
 ## Borderline (2 - 3c)
 
 ```
-c v|f a|c l|l h|cic m
+ic v|lf a|ic l|al h|cic m
 ```
 
 <details><summary> Beast Prices </summary><ul>
@@ -47,11 +47,11 @@ c v|f a|c l|l h|cic m
 ## Trash (under 2c)
 
 ```
-e vu|fro|l q|c gol|mal d|c wa|ne ch|gm|e rhe|c sh|c san|ine rho|ne co|l sco|c pi|c a|c sp|vip|l scr
+e vu|c fr|al q|c gol|mal d|c wa|ne ch|magm|e rhe|c sh|c san|ine rho|ne co|l sco|c pi|ic a|c sp|ne b
 ```
 
 ```
-ber|x m|l w|c ta|c goa|c fl|c ch|ne re|c u|c sav|ua
+l scr|d ab|ex m|al w|c ta|c goa|c fl|c ch|ne re|ic u|c sav|c ga
 ```
 
 <details><summary> Beast Prices </summary><ul>

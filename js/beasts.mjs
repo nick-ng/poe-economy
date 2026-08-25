@@ -79,6 +79,7 @@ const getBeastsJson = async (beastNames) => {
           })
         ) {
           if (
+            subStr.length >= 4 &&
             subStr.length < shortest.length
           ) {
             shortest = subStr;
@@ -189,7 +190,7 @@ const main = async () => {
     redBeasts,
     `\n## Borderline (${
       borderlineBeasts[borderlineBeasts.length - 1].chaosValue
-    } - ${borderlineBeasts[0].chaosValue}c)`,
+    }c - ${borderlineBeasts[0].chaosValue}c)`,
   ));
 
   const cheapBeasts = redBeastPrices.filter((r) =>

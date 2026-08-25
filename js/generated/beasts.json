@@ -1,19 +1,19 @@
 [
   {
     "beast": "Craiceann, First of the Deep",
-    "regex": "ep"
+    "regex": "aice"
   },
   {
     "beast": "Farrul, First of the Plains",
-    "regex": "e p"
+    "regex": "arru"
   },
   {
     "beast": "Fenumus, First of the Night",
-    "regex": "umu"
+    "regex": "numu"
   },
   {
     "beast": "Saqawal, First of the Sky",
-    "regex": "awa"
+    "regex": "qawa"
   },
   {
     "beast": "Craicic Spider Crab",
@@ -21,11 +21,11 @@
   },
   {
     "beast": "Farric Tiger Alpha",
-    "regex": "r a"
+    "regex": "c ti"
   },
   {
     "beast": "Fenumal Hybrid Arachnid",
-    "regex": "l h"
+    "regex": "al h"
   },
   {
     "beast": "Saqawine Rhex",
@@ -53,11 +53,11 @@
   },
   {
     "beast": "Craicic Squid",
-    "regex": "sq"
+    "regex": "c sq"
   },
   {
     "beast": "Craicic Vassal",
-    "regex": "c v"
+    "regex": "ic v"
   },
   {
     "beast": "Craicic Watcher",
@@ -65,7 +65,7 @@
   },
   {
     "beast": "Farric Ape",
-    "regex": "c a"
+    "regex": "ic a"
   },
   {
     "beast": "Farric Chieftain",
@@ -77,11 +77,11 @@
   },
   {
     "beast": "Farric Frost Hellion Alpha",
-    "regex": "fro"
+    "regex": "c fr"
   },
   {
     "beast": "Farric Gargantuan",
-    "regex": "ua"
+    "regex": "c ga"
   },
   {
     "beast": "Farric Goatman",
@@ -93,11 +93,11 @@
   },
   {
     "beast": "Farric Lynx Alpha",
-    "regex": "c l"
+    "regex": "ic l"
   },
   {
     "beast": "Farric Magma Hound",
-    "regex": "gm"
+    "regex": "magm"
   },
   {
     "beast": "Farric Pit Hound",
@@ -109,11 +109,11 @@
   },
   {
     "beast": "Farric Ursa",
-    "regex": "c u"
+    "regex": "ic u"
   },
   {
     "beast": "Farric Wolf Alpha",
-    "regex": "f a"
+    "regex": "lf a"
   },
   {
     "beast": "Fenumal Devourer",
@@ -121,7 +121,7 @@
   },
   {
     "beast": "Fenumal Queen",
-    "regex": "l q"
+    "regex": "al q"
   },
   {
     "beast": "Fenumal Plagued Arachnid",
@@ -137,11 +137,11 @@
   },
   {
     "beast": "Fenumal Widow",
-    "regex": "l w"
+    "regex": "al w"
   },
   {
     "beast": "Saqawine Blood Viper",
-    "regex": "vip"
+    "regex": "ne b"
   },
   {
     "beast": "Saqawine Chimeral",
@@ -165,19 +165,19 @@
   },
   {
     "beast": "Primal Crushclaw",
-    "regex": "hc"
+    "regex": "l cr"
   },
   {
     "beast": "Primal Cystcaller",
-    "regex": "cy"
+    "regex": "l cy"
   },
   {
     "beast": "Primal Rhex Matriarch",
-    "regex": "x m"
+    "regex": "ex m"
   },
   {
     "beast": "Vivid Abberarach",
-    "regex": "ber"
+    "regex": "d ab"
   },
   {
     "beast": "Vivid Vulture",
@@ -185,15 +185,15 @@
   },
   {
     "beast": "Vivid Watcher",
-    "regex": "d w"
+    "regex": "id w"
   },
   {
     "beast": "Wild Brambleback",
-    "regex": "leb"
+    "regex": "bleb"
   },
   {
     "beast": "Wild Bristle Matron",
-    "regex": "tl"
+    "regex": "bris"
   },
   {
     "beast": "Wild Hellion Alpha",
@@ -201,6 +201,6 @@
   },
   {
     "beast": "Black Mórrigan",
-    "regex": "k m"
+    "regex": "ck m"
   }
 ]
