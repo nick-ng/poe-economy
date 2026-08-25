@@ -1,7 +1,7 @@
 
 # merclab
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/skill-gems), fetched at Wed Aug 26 2026 00:53:15 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/skill-gems), fetched at Wed Aug 26 2026 00:56:46 GMT+1200 (New Zealand Standard Time)
 
 The following prices are for gem level < 20 and quality < 20
 
@@ -208,7 +208,7 @@ Average | 28.6c | -
 
 # Beasts
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Wed Aug 26 2026 00:53:15 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Wed Aug 26 2026 00:56:46 GMT+1200 (New Zealand Standard Time)
 
 Yellow Beasts: 2c
 
@@ -216,7 +216,7 @@ Yellow Beasts: 2c
 ## Keep (4c - 315c)
 
 ```
-mó|cic c|l pl|tl|ld h|leb|ul,|s,|cy|id v|hc|awa|n,|d w|r a|sq
+k m|cic c|l pl|tl|ld h|leb|e p|umu|cy|id v|hc|awa|ep|d w|r a|sq
 ```
 
 <details><summary> Beast Prices </summary><ul>

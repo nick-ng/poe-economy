@@ -67,7 +67,10 @@ const getBeastsJson = async (beastNames) => {
     let shortest = n;
     for (let start = 0; start < (n.length - 1); start++) {
       for (let end = start + 1; end < n.length; end++) {
-        const subStr = lowerCaseName.slice(start, end + 1);
+        const subStr = lowerCaseName.slice(start, end + 1).trim().replace(
+          /^[^a-z]+|[^a-z]+$/i,
+          "",
+        );
         if (
           !allBeastStrings.some((bn) => {
             const beastNameLowerCase = bn.toLowerCase();
@@ -76,7 +79,6 @@ const getBeastsJson = async (beastNames) => {
           })
         ) {
           if (
-            subStr.trim().length > 3 &&
             subStr.length < shortest.length
           ) {
             shortest = subStr;
