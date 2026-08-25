@@ -1,18 +1,14 @@
 # Beasts
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Wed Aug 26 2026 00:30:01 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Wed Aug 26 2026 00:50:21 GMT+1200 (New Zealand Standard Time)
 
 Yellow Beasts: 2c
 
 
-## Keep (2c+)
+## Keep (5c - 319c)
 
 ```
-ck m|cic c|l pl|bris|ld h|bleb|arru|l cy|numu|id v|l cr|qawa|aice|id w|c ti|c sq|ic v|lf a|ic l|al h
-```
-
-```
-cic m
+ck m|cic c|l pl|bris|ld h|bleb|arru|l cy|numu|id v|l cr|qawa|aice|id w|c ti|c sq
 ```
 
 <details><summary> Beast Prices </summary><ul>
@@ -32,6 +28,15 @@ cic m
 <li>Vivid Watcher: 8c</li>
 <li>Farric Tiger Alpha: 7c</li>
 <li>Craicic Squid: 5c</li>
+</ul></details>
+
+## Borderline (2 - 3c)
+
+```
+ic v|lf a|ic l|al h|cic m
+```
+
+<details><summary> Beast Prices </summary><ul>
 <li>Craicic Vassal: 3c</li>
 <li>Farric Wolf Alpha: 3c</li>
 <li>Farric Lynx Alpha: 2c</li>
@@ -39,14 +44,14 @@ cic m
 <li>Craicic Maw: 2c</li>
 </ul></details>
 
-## Borderline (1c+)
+## Trash (under 2c)
 
 ```
 e vu|c fr|al q|c gol|mal d|c wa|ne ch|magm|e rhe|c sh|c san|ine rho|ne co|l sco|c pi|ic a|c sp|ne b
 ```
 
 ```
-l scr|d ab|ex m
+l scr|d ab|ex m|al w|c ta|c goa|c fl|c ch|ic u|c sav|ne re|c ga
 ```
 
 <details><summary> Beast Prices </summary><ul>
@@ -71,15 +76,6 @@ l scr|d ab|ex m
 <li>Fenumal Scrabbler: 1c</li>
 <li>Vivid Abberarach: 1c</li>
 <li>Primal Rhex Matriarch: 1c</li>
-</ul></details>
-
-## Trash (under 1c)
-
-```
-al w|c ta|c goa|c fl|c ch|ic u|c sav|ne re|c ga
-```
-
-<details><summary> Beast Prices </summary><ul>
 <li>Fenumal Widow: 0.93c</li>
 <li>Farric Taurus: 0.9c</li>
 <li>Farric Goatman: 0.87c</li>
