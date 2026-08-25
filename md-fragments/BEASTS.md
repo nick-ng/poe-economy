@@ -1,6 +1,6 @@
 # Beasts
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Tue Aug 25 2026 22:19:03 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Wed Aug 26 2026 00:30:01 GMT+1200 (New Zealand Standard Time)
 
 Yellow Beasts: 2c
 
@@ -8,7 +8,7 @@ Yellow Beasts: 2c
 ## Keep (2c+)
 
 ```
-ck m|cic c|l pl|bris|ld h|bleb|l cy|arru|numu|id v|l cr|qawa|aice|id w|c ti|c sq|ic v|lf a|ic l|al h
+ck m|cic c|l pl|bris|ld h|bleb|arru|l cy|numu|id v|l cr|qawa|aice|id w|c ti|c sq|ic v|lf a|ic l|al h
 ```
 
 ```
@@ -16,23 +16,23 @@ cic m
 ```
 
 <details><summary> Beast Prices </summary><ul>
-<li>Black Mórrigan: 320c</li>
-<li>Craicic Croaker: 149.2c</li>
-<li>Fenumal Plagued Arachnid: 140c</li>
-<li>Wild Bristle Matron: 130c</li>
-<li>Wild Hellion Alpha: 48c</li>
-<li>Wild Brambleback: 41c</li>
-<li>Primal Cystcaller: 33.3c</li>
+<li>Black Mórrigan: 319c</li>
+<li>Craicic Croaker: 149c</li>
+<li>Fenumal Plagued Arachnid: 143c</li>
+<li>Wild Bristle Matron: 112c</li>
+<li>Wild Hellion Alpha: 49.6c</li>
+<li>Wild Brambleback: 36.3c</li>
 <li>Farrul, First of the Plains: 33c</li>
+<li>Primal Cystcaller: 31c</li>
 <li>Fenumus, First of the Night: 30c</li>
 <li>Vivid Vulture: 30c</li>
-<li>Primal Crushclaw: 30c</li>
+<li>Primal Crushclaw: 22.1c</li>
 <li>Saqawal, First of the Sky: 15c</li>
 <li>Craiceann, First of the Deep: 10c</li>
-<li>Vivid Watcher: 9c</li>
+<li>Vivid Watcher: 8c</li>
 <li>Farric Tiger Alpha: 7c</li>
-<li>Craicic Squid: 5.4c</li>
-<li>Craicic Vassal: 4c</li>
+<li>Craicic Squid: 5c</li>
+<li>Craicic Vassal: 3c</li>
 <li>Farric Wolf Alpha: 3c</li>
 <li>Farric Lynx Alpha: 2c</li>
 <li>Fenumal Hybrid Arachnid: 2c</li>
@@ -42,11 +42,11 @@ cic m
 ## Borderline (1c+)
 
 ```
-e vu|c fr|al q|c gol|mal d|c wa|ne ch|magm|c ta|e rhe|c sh|c san|al w|ine rho|ne co|l sco|c pi|ne re
+e vu|c fr|al q|c gol|mal d|c wa|ne ch|magm|e rhe|c sh|c san|ine rho|ne co|l sco|c pi|ic a|c sp|ne b
 ```
 
 ```
-ic a|c sp|ne b|l scr|d ab|ex m
+l scr|d ab|ex m
 ```
 
 <details><summary> Beast Prices </summary><ul>
@@ -58,16 +58,13 @@ ic a|c sp|ne b|l scr|d ab|ex m
 <li>Craicic Watcher: 1c</li>
 <li>Saqawine Chimeral: 1c</li>
 <li>Farric Magma Hound: 1c</li>
-<li>Farric Taurus: 1c</li>
 <li>Saqawine Rhex: 1c</li>
 <li>Craicic Shield Crab: 1c</li>
 <li>Craicic Sand Spitter: 1c</li>
-<li>Fenumal Widow: 1c</li>
 <li>Saqawine Rhoa: 1c</li>
 <li>Saqawine Cobra: 1c</li>
 <li>Fenumal Scorpion: 1c</li>
 <li>Farric Pit Hound: 1c</li>
-<li>Saqawine Retch: 1c</li>
 <li>Farric Ape: 1c</li>
 <li>Craicic Spider Crab: 1c</li>
 <li>Saqawine Blood Viper: 1c</li>
@@ -79,14 +76,17 @@ ic a|c sp|ne b|l scr|d ab|ex m
 ## Trash (under 1c)
 
 ```
-c ch|c fl|c goa|ic u|c sav|c ga
+al w|c ta|c goa|c fl|c ch|ic u|c sav|ne re|c ga
 ```
 
 <details><summary> Beast Prices </summary><ul>
-<li>Farric Chieftain: 0.97c</li>
-<li>Farric Flame Hellion Alpha: 0.87c</li>
-<li>Farric Goatman: 0.77c</li>
-<li>Farric Ursa: 0.67c</li>
-<li>Craicic Savage Crab: 0.51c</li>
-<li>Farric Gargantuan: 0.5c</li>
+<li>Fenumal Widow: 0.93c</li>
+<li>Farric Taurus: 0.9c</li>
+<li>Farric Goatman: 0.87c</li>
+<li>Farric Flame Hellion Alpha: 0.84c</li>
+<li>Farric Chieftain: 0.74c</li>
+<li>Farric Ursa: 0.58c</li>
+<li>Craicic Savage Crab: 0.55c</li>
+<li>Saqawine Retch: 0.55c</li>
+<li>Farric Gargantuan: 0.46c</li>
 </ul></details>
