@@ -4,6 +4,8 @@ IFS=$'\n\t'
 
 echo "update started at $(date)"
 
+cd "$(dirname $0)"
+
 mkdir -p temp
 
 echo "" > README.md
