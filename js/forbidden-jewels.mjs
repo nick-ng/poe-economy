@@ -135,7 +135,7 @@ const main = async () => {
                   p.fleshChaosValue.toFixed(1)
                 } c](${p.fleshUrl}) | [${
                   p.flameChaosValue.toFixed(1)
-                } c](${p.flameUrl}) | ${p.totalChaosValue.toFixed(1)}c |`,
+                } c](${p.flameUrl}) | ${p.totalChaosValue.toFixed(1)} c |`,
               );
             },
           );
