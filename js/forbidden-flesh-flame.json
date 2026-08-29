@@ -12,57 +12,57 @@
   {
     "notable": "Aspect of Carnage",
     "id": 59920,
-    "effect": "10% increased Damage taken; 40% more Damage"
+    "effect": "10% increased Damage taken<br/>40% more Damage"
   },
   {
     "notable": "Assassin",
     "id": 43122,
-    "effect": "10% chance to gain a Power Charge on Critical Strike; +0.75% to Critical Strike Chance; Damage cannot be Reflected; 10% chance to gain Elusive on Critical Strike"
+    "effect": "10% chance to gain a Power Charge on Critical Strike<br/>+0.75% to Critical Strike Chance<br/>Damage cannot be Reflected<br/>10% chance to gain Elusive on Critical Strike"
   },
   {
     "notable": "Augury of Penitence",
     "id": 40059,
-    "effect": "Nearby Enemies take 16% increased Elemental Damage; Nearby Enemies deal 8% less Elemental Damage"
+    "effect": "Nearby Enemies take 16% increased Elemental Damage<br/>Nearby Enemies deal 8% less Elemental Damage"
   },
   {
     "notable": "Avatar of the Wilds",
     "id": 55509,
-    "effect": "Grants Level 20 Unbound Avatar Skill; Your Hits always inflict Freeze, Shock and Ignite while Unbound; Gain 1 Unbound Fury when you inflict an Elemental Ailment with a Hit on an Enemy, no more than once every 0.2 seconds for each type of Ailment; Cannot gain Unbound Fury while Unbound; 100% more Elemental Damage while Unbound"
+    "effect": "Grants Level 20 Unbound Avatar Skill<br/>Your Hits always inflict Freeze, Shock and Ignite while Unbound<br/>Gain 1 Unbound Fury when you inflict an Elemental Ailment with a Hit on an Enemy, no more than once every 0.2 seconds for each type of Ailment<br/>Cannot gain Unbound Fury while Unbound<br/>100% more Elemental Damage while Unbound"
   },
   {
     "notable": "Avidity",
     "id": 44482,
-    "effect": "+1 to Maximum Frenzy Charges; Gain a Frenzy Charge each second while Moving; 5% more Accuracy Rating per Frenzy Charge"
+    "effect": "+1 to Maximum Frenzy Charges<br/>Gain a Frenzy Charge each second while Moving<br/>5% more Accuracy Rating per Frenzy Charge"
   },
   {
     "notable": "Bane of Legends",
     "id": 62817,
-    "effect": "20% more Damage with Hits and Ailments against Unique Enemies; 10% more Damage if you've Killed Recently; Cannot take Reflected Physical Damage"
+    "effect": "20% more Damage with Hits and Ailments against Unique Enemies<br/>10% more Damage if you've Killed Recently<br/>Cannot take Reflected Physical Damage"
   },
   {
     "notable": "Bastion of Elements",
     "id": 4917,
-    "effect": "Triggers Level 20 Primal Aegis when Allocated; Primal Aegis can take 75 Elemental Damage per Allocated Notable Passive Skill; Other Aegis Skills are Disabled; Cannot take Reflected Elemental Damage"
+    "effect": "Triggers Level 20 Primal Aegis when Allocated<br/>Primal Aegis can take 75 Elemental Damage per Allocated Notable Passive Skill<br/>Other Aegis Skills are Disabled<br/>Cannot take Reflected Elemental Damage"
   },
   {
     "notable": "Bastion of Hope",
     "id": 39728,
-    "effect": "If you've Attacked Recently, you and nearby Allies have +25% Chance to Block Attack Damage; If you've Cast a Spell Recently, you and nearby Allies have +25% Chance to Block Spell Damage"
+    "effect": "If you've Attacked Recently, you and nearby Allies have +25% Chance to Block Attack Damage<br/>If you've Cast a Spell Recently, you and nearby Allies have +25% Chance to Block Spell Damage"
   },
   {
     "notable": "Berserker",
     "id": 4194,
-    "effect": "Inherent Rage Loss starts 1 second later; Cannot be Stunned while you have at least 25 Rage; 15% more Damage; 5% increased Damage taken; 2% of Attack Damage Leeched as Life and Mana if you've Killed Recently"
+    "effect": "Inherent Rage Loss starts 1 second later<br/>Cannot be Stunned while you have at least 25 Rage<br/>15% more Damage<br/>5% increased Damage taken<br/>2% of Attack Damage Leeched as Life and Mana if you've Killed Recently"
   },
   {
     "notable": "Bomb Specialist",
     "id": 47778,
-    "effect": "Hits have 30% chance to deal 50% more Area Damage; 30% chance to take 50% less Area Damage from Hits"
+    "effect": "Hits have 30% chance to deal 50% more Area Damage<br/>30% chance to take 50% less Area Damage from Hits"
   },
   {
     "notable": "Bone Barrier",
     "id": 14603,
-    "effect": "1% additional Physical Damage Reduction per Minion, up to 10%; 1% of Damage Dealt by your Minions is Leeched to you as Life; Minions gain 40% of Maximum Life as Extra Maximum Energy Shield"
+    "effect": "1% additional Physical Damage Reduction per Minion, up to 10%<br/>1% of Damage Dealt by your Minions is Leeched to you as Life<br/>Minions gain 40% of Maximum Life as Extra Maximum Energy Shield"
   },
   { "notable": "Born in the Shadows", "id": 5087 },
   { "notable": "Bringer of Ruin", "id": 258 },
@@ -194,17 +194,17 @@
   {
     "notable": "Unbreakable",
     "id": 53816,
-    "effect": "Armour from Equipped Body Armour is doubled; 15% of Armour also applies to Chaos Damage taken from Hits"
+    "effect": "Armour from Equipped Body Armour is doubled<br/>15% of Armour also applies to Chaos Damage taken from Hits"
   },
   {
     "notable": "Undeniable",
     "id": 44297,
-    "effect": "+500 to Accuracy Rating; 1% increased Attack Speed per 150 Accuracy Rating; Gain Accuracy Rating equal to twice your Strength"
+    "effect": "+500 to Accuracy Rating<br/>1% increased Attack Speed per 150 Accuracy Rating<br/>Gain Accuracy Rating equal to twice your Strength"
   },
   {
     "notable": "Unflinching",
     "id": 1734,
-    "effect": "30% chance to gain an Endurance Charge when you are Hit; +1 to Maximum Endurance Charges; 25% chance that if you would gain Endurance Charges, you instead gain up to maximum Endurance Charges; Gain 1 Endurance Charge every second if you've been Hit Recently"
+    "effect": "30% chance to gain an Endurance Charge when you are Hit<br/>+1 to Maximum Endurance Charges<br/>25% chance that if you would gain Endurance Charges, you instead gain up to maximum Endurance Charges<br/>Gain 1 Endurance Charge every second if you've been Hit Recently"
   },
   { "notable": "Unhallowed Rite", "id": 5502 },
   { "notable": "Unholy Authority", "id": 31344 },
@@ -213,26 +213,26 @@
   {
     "notable": "Unrelenting",
     "id": 56789,
-    "effect": "1% additional Physical Damage Reduction per Endurance Charge; 1% additional Elemental Damage Reduction per Endurance Charge"
+    "effect": "1% additional Physical Damage Reduction per Endurance Charge<br/>1% additional Elemental Damage Reduction per Endurance Charge"
   },
   { "notable": "Unstable Infusion", "id": 4242 },
   {
     "notable": "Unstoppable",
     "id": 5819,
-    "effect": "Action Speed cannot be modified to below Base Value; Movement Speed cannot be modified to below Base Value; 10% increased Movement Speed; Cannot be Stunned"
+    "effect": "Action Speed cannot be modified to below Base Value<br/>Movement Speed cannot be modified to below Base Value<br/>10% increased Movement Speed<br/>Cannot be Stunned"
   },
   { "notable": "Unstoppable Hero", "id": 33940 },
   {
     "notable": "Untiring",
     "id": 17988,
-    "effect": "1.5% of Physical Damage prevented from Hits in the past 10 seconds is Regenerated as Life per second; 40% increased Life Regeneration rate"
+    "effect": "1.5% of Physical Damage prevented from Hits in the past 10 seconds is Regenerated as Life per second<br/>40% increased Life Regeneration rate"
   },
   { "notable": "Unwavering Crusade", "id": 19641 },
   { "notable": "Unwavering Faith", "id": 64768 },
   {
     "notable": "Unyielding",
     "id": 62595,
-    "effect": "8% increased Damage per Endurance Charge; 25% chance to gain an Endurance Chage when you Stun an Enemy; 10% increased Stun Duration on Enemies per Endurance Chage; 6% increased Area of Effect per Endurance Charge"
+    "effect": "8% increased Damage per Endurance Charge<br/>25% chance to gain an Endurance Chage when you Stun an Enemy<br/>10% increased Stun Duration on Enemies per Endurance Chage<br/>6% increased Area of Effect per Endurance Charge"
   },
   { "notable": "Valako, Storm's Embrace", "id": 32249 },
   { "notable": "Vile Bastion", "id": 37492 },
