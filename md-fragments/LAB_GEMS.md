@@ -1,6 +1,6 @@
 # merclab
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/skill-gems), fetched at Sun Aug 30 2026 02:05:19 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/skill-gems), fetched at Sun Aug 30 2026 02:06:18 GMT+1200 (New Zealand Standard Time)
 
 The following prices are for gem level < 20 and quality < 20
 
