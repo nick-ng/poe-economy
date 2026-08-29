@@ -93,6 +93,8 @@ const main = async () => {
   lines.push(
     "# Forbidden Jewels",
     "",
+    `[${league.name} League](https://poe.ninja/poe1/economy/${league.url}/forbidden-jewels), fetched at ${new Date()}`,
+    "",
     "For builds that want Forbidden jewels of their own ascendancy, this can help you find the cheapest set to buy",
     "",
     "Hover over the Notable's name to see the effect",
