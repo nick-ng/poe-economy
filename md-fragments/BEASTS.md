@@ -1,6 +1,6 @@
 # Beasts
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Sun Aug 30 2026 02:18:20 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Sun Aug 30 2026 02:19:23 GMT+1200 (New Zealand Standard Time)
 
 Yellow Beasts: 2c
 
