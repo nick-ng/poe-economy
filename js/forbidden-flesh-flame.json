@@ -1,17 +1,69 @@
 [
-  { "notable": "Ancestral Fury", "id": 38999 },
-  { "notable": "Arcane Blessing", "id": 40510 },
-  { "notable": "Aspect of Carnage", "id": 59920 },
-  { "notable": "Assassin", "id": 43122 },
-  { "notable": "Augury of Penitence", "id": 40059 },
-  { "notable": "Avatar of the Wilds", "id": 55509 },
-  { "notable": "Avidity", "id": 44482 },
-  { "notable": "Bane of Legends", "id": 62817 },
-  { "notable": "Bastion of Elements", "id": 4917 },
-  { "notable": "Bastion of Hope", "id": 39728 },
-  { "notable": "Berserker", "id": 4194 },
-  { "notable": "Bomb Specialist", "id": 47778 },
-  { "notable": "Bone Barrier", "id": 14603 },
+  {
+    "notable": "Ancestral Fury",
+    "id": 38999,
+    "effect": "Strike Skills also target the previous location they were used"
+  },
+  {
+    "notable": "Arcane Blessing",
+    "id": 40510,
+    "effect": "Gain Arcane Surge when you or your Totems Hit an Enemy with a Spell"
+  },
+  {
+    "notable": "Aspect of Carnage",
+    "id": 59920,
+    "effect": "10% increased Damage taken; 40% more Damage"
+  },
+  {
+    "notable": "Assassin",
+    "id": 43122,
+    "effect": "10% chance to gain a Power Charge on Critical Strike; +0.75% to Critical Strike Chance; Damage cannot be Reflected; 10% chance to gain Elusive on Critical Strike"
+  },
+  {
+    "notable": "Augury of Penitence",
+    "id": 40059,
+    "effect": "Nearby Enemies take 16% increased Elemental Damage; Nearby Enemies deal 8% less Elemental Damage"
+  },
+  {
+    "notable": "Avatar of the Wilds",
+    "id": 55509,
+    "effect": "Grants Level 20 Unbound Avatar Skill; Your Hits always inflict Freeze, Shock and Ignite while Unbound; Gain 1 Unbound Fury when you inflict an Elemental Ailment with a Hit on an Enemy, no more than once every 0.2 seconds for each type of Ailment; Cannot gain Unbound Fury while Unbound; 100% more Elemental Damage while Unbound"
+  },
+  {
+    "notable": "Avidity",
+    "id": 44482,
+    "effect": "+1 to Maximum Frenzy Charges; Gain a Frenzy Charge each second while Moving; 5% more Accuracy Rating per Frenzy Charge"
+  },
+  {
+    "notable": "Bane of Legends",
+    "id": 62817,
+    "effect": "20% more Damage with Hits and Ailments against Unique Enemies; 10% more Damage if you've Killed Recently; Cannot take Reflected Physical Damage"
+  },
+  {
+    "notable": "Bastion of Elements",
+    "id": 4917,
+    "effect": "Triggers Level 20 Primal Aegis when Allocated; Primal Aegis can take 75 Elemental Damage per Allocated Notable Passive Skill; Other Aegis Skills are Disabled; Cannot take Reflected Elemental Damage"
+  },
+  {
+    "notable": "Bastion of Hope",
+    "id": 39728,
+    "effect": "If you've Attacked Recently, you and nearby Allies have +25% Chance to Block Attack Damage; If you've Cast a Spell Recently, you and nearby Allies have +25% Chance to Block Spell Damage"
+  },
+  {
+    "notable": "Berserker",
+    "id": 4194,
+    "effect": "Inherent Rage Loss starts 1 second later; Cannot be Stunned while you have at least 25 Rage; 15% more Damage; 5% increased Damage taken; 2% of Attack Damage Leeched as Life and Mana if you've Killed Recently"
+  },
+  {
+    "notable": "Bomb Specialist",
+    "id": 47778,
+    "effect": "Hits have 30% chance to deal 50% more Area Damage; 30% chance to take 50% less Area Damage from Hits"
+  },
+  {
+    "notable": "Bone Barrier",
+    "id": 14603,
+    "effect": "1% additional Physical Damage Reduction per Minion, up to 10%; 1% of Damage Dealt by your Minions is Leeched to you as Life; Minions gain 40% of Maximum Life as Extra Maximum Energy Shield"
+  },
   { "notable": "Born in the Shadows", "id": 5087 },
   { "notable": "Bringer of Ruin", "id": 258 },
   { "notable": "Brutal Fervour", "id": 10143 },

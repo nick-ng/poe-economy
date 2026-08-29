@@ -6,6 +6,8 @@ import notableIds from "./forbidden-flesh-flame.json" with { type: "json" };
 
 const lines = [];
 
+const MAX_EFFECT_LENGTH = 255;
+
 const getTradeUrl = (name, variant, league) => {
   const variantId = variant === "Forbidden Flesh"
     ? "explicit.stat_2460506030"
@@ -59,12 +61,14 @@ const main = async () => {
     if (!notables[l.name]) {
       notables[l.name] = {};
     }
+    const notableEffect = notableIds.find((n) => n.notable === l.name)?.effect;
 
     notables[l.name][l.variant] = {
       ...l,
       baseClass: l.metadata.baseClass,
       ascendancy: l.metadata.ascendency,
       tradeUrl: getTradeUrl(l.name, l.variant, league.name),
+      effect: notableEffect || "",
     };
     if (!ascendancies[baseClass]) {
       ascendancies[baseClass] = {};
@@ -92,8 +96,8 @@ const main = async () => {
             "",
             `### ${as}`,
             "",
-            "| Notable | Flesh | Flame | Total |",
-            "| :- | -: | -: | -: |",
+            "| Notable | Effect | Flesh | Flame | Total |",
+            "| :- | :- | -: | -: | -: |",
           );
           ascendancies[baseClass][as].map((n) => {
             const flesh = notables[n]["Forbidden Flesh"];
@@ -106,11 +110,18 @@ const main = async () => {
               flameChaosValue: flame.chaosValue,
               flameUrl: flame.tradeUrl,
               totalChaosValue: flesh.chaosValue + flame.chaosValue,
+              effect: flesh.effect.length < MAX_EFFECT_LENGTH
+                ? flesh.effect
+                : `${flesh.slice(0, MAX_EFFECT_LENGTH - 1)}…`,
             };
           }).sort((a, b) => a.totalChaosValue - b.totalChaosValue).forEach(
             (p) => {
               lines.push(
-                `| ${p.notable} | ${p.fleshChaosValue}c [Trade](${p.fleshUrl}) | ${p.flameChaosValue}c [Trade](${p.flameUrl}) | ${p.totalChaosValue}c |`,
+                `| ${p.notable} | ${p.effect} | ${
+                  p.fleshChaosValue.toFixed(1)
+                }c [Trade](${p.fleshUrl}) | ${
+                  p.flameChaosValue.toFixed(1)
+                }c [Trade](${p.flameUrl}) | ${p.totalChaosValue.toFixed(1)}c |`,
               );
             },
           );
