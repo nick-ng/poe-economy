@@ -2,6 +2,7 @@
 
 - [Beast Search Strings](https://github.com/nick-ng/poe-economy/blob/main/md-fragments/BEASTS.md)
 - [merclab Expected Value](https://github.com/nick-ng/poe-economy/blob/main/md-fragments/LAB_GEMS.md)
+- [Forbidden Jewel Prices](https://github.com/nick-ng/poe-economy/blob/main/md-fragments/FORBIDDEN_JEWELS.md)
 - [Heist Cheatsheet](https://github.com/nick-ng/poe-economy/blob/main/md-fragments/HEIST.md)
 
 ## Requirements

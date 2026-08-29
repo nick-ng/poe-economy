@@ -132,9 +132,7 @@ const getBeastSubsections = (beasts, redBeasts, message) => {
 
 const main = async () => {
   const league = await getLeague();
-
   const resJson = await fetchPoeNinjaItems(league.name, "Beast");
-
   const beastNames = resJson.lines.map((a) => a.name);
 
   lines.push(

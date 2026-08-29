@@ -10,6 +10,7 @@ mkdir -p temp
 
 node ./js/lab-gems.mjs
 node ./js/beasts.mjs
+node ./js/forbidden-jewels.mjs
 
 git add ./md-fragments/
 git commit -m "chore: auto update - $(date)"
