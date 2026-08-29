@@ -6,13 +6,9 @@ import notableIds from "./forbidden-flesh-flame.json" with { type: "json" };
 
 const lines = [];
 
-const MAX_EFFECT_LENGTH = 255;
+const MAX_EFFECT_LENGTH = 30;
 
 const getTradeUrl = (name, variant, league) => {
-  const variantId = variant === "Forbidden Flesh"
-    ? "explicit.stat_2460506030"
-    : "explicit.stat_1190333629";
-
   const notableId = notableIds.find((n) => n.notable === name)?.id;
 
   if (!notableId) {
@@ -56,7 +52,20 @@ const main = async () => {
 
   resJson.lines.forEach((l) => {
     const baseClass = l.metadata.baseClass;
-    const ascendancy = l.metadata.ascendancy;
+    let ascendancy = l.metadata.ascendancy;
+    if (
+      [
+        "Fatal Flourish",
+        "Fury of Nature",
+        "Harness the Void",
+        "Indomitable Resolve",
+        "Nine Lives",
+        "Searing Purity",
+        "Unleashed Potential",
+      ].includes(l.name)
+    ) {
+      ascendancy = "!Hidden";
+    }
 
     if (!notables[l.name]) {
       notables[l.name] = {};
@@ -75,16 +84,18 @@ const main = async () => {
     }
 
     if (!ascendancies[baseClass][ascendancy]) {
-      ascendancies[baseClass][ascendancy] = [];
+      ascendancies[baseClass][ascendancy] = new Set();
     }
 
-    ascendancies[baseClass][ascendancy].push(l.name);
+    ascendancies[baseClass][ascendancy].add(l.name);
   });
 
   lines.push(
     "# Forbidden Jewels",
     "",
     "For builds that want Forbidden jewels of their own ascendancy, this can help you find the cheapest set to buy",
+    "",
+    "Click on the price to open the trade site",
     "",
   );
   Object.keys(ascendancies).sort((a, b) => a.localeCompare(b)).forEach(
@@ -94,12 +105,12 @@ const main = async () => {
         .forEach((as) => {
           lines.push(
             "",
-            `### ${as}`,
+            `### ${as === "!Hidden" ? "Hidden" : as}`,
             "",
             "| Notable | Effect | Flesh | Flame | Total |",
             "| :- | :- | -: | -: | -: |",
           );
-          ascendancies[baseClass][as].map((n) => {
+          [...ascendancies[baseClass][as]].map((n) => {
             const flesh = notables[n]["Forbidden Flesh"];
             const flame = notables[n]["Forbidden Flame"];
 
@@ -110,18 +121,21 @@ const main = async () => {
               flameChaosValue: flame.chaosValue,
               flameUrl: flame.tradeUrl,
               totalChaosValue: flesh.chaosValue + flame.chaosValue,
-              effect: flesh.effect.length < MAX_EFFECT_LENGTH
-                ? flesh.effect
-                : `${flesh.effect.slice(0, MAX_EFFECT_LENGTH - 1)}…`,
+              effect: flesh.effect,
+              // effect: flesh.effect.length < MAX_EFFECT_LENGTH
+              //   ? flesh.effect
+              //   : `${flesh.effect.slice(0, MAX_EFFECT_LENGTH - 1)}…`,
             };
           }).sort((a, b) => a.totalChaosValue - b.totalChaosValue).forEach(
             (p) => {
               lines.push(
-                `| ${p.notable} | ${p.effect} | ${
+                `| [${p.notable}](https://www.poewiki.net/wiki/${
+                  p.notable.replaceAll(" ", "_")
+                }) | ${p.effect} | [${
                   p.fleshChaosValue.toFixed(1)
-                }c [Trade](${p.fleshUrl}) | ${
+                } c](${p.fleshUrl}) | [${
                   p.flameChaosValue.toFixed(1)
-                }c [Trade](${p.flameUrl}) | ${p.totalChaosValue.toFixed(1)}c |`,
+                } c](${p.flameUrl}) | ${p.totalChaosValue.toFixed(1)}c |`,
               );
             },
           );

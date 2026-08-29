@@ -191,21 +191,49 @@
   { "notable": "Toxic Delivery", "id": 19598 },
   { "notable": "Trickster", "id": 6778 },
   { "notable": "Tukohama, War's Herald", "id": 53095 },
-  { "notable": "Unbreakable", "id": 53816 },
-  { "notable": "Undeniable", "id": 44297 },
-  { "notable": "Unflinching", "id": 1734 },
+  {
+    "notable": "Unbreakable",
+    "id": 53816,
+    "effect": "Armour from Equipped Body Armour is doubled; 15% of Armour also applies to Chaos Damage taken from Hits"
+  },
+  {
+    "notable": "Undeniable",
+    "id": 44297,
+    "effect": "+500 to Accuracy Rating; 1% increased Attack Speed per 150 Accuracy Rating; Gain Accuracy Rating equal to twice your Strength"
+  },
+  {
+    "notable": "Unflinching",
+    "id": 1734,
+    "effect": "30% chance to gain an Endurance Charge when you are Hit; +1 to Maximum Endurance Charges; 25% chance that if you would gain Endurance Charges, you instead gain up to maximum Endurance Charges; Gain 1 Endurance Charge every second if you've been Hit Recently"
+  },
   { "notable": "Unhallowed Rite", "id": 5502 },
   { "notable": "Unholy Authority", "id": 31344 },
   { "notable": "Unleashed Potential", "id": 19355 },
   { "notable": "Unnatural Strength", "id": 65153 },
-  { "notable": "Unrelenting", "id": 56789 },
+  {
+    "notable": "Unrelenting",
+    "id": 56789,
+    "effect": "1% additional Physical Damage Reduction per Endurance Charge; 1% additional Elemental Damage Reduction per Endurance Charge"
+  },
   { "notable": "Unstable Infusion", "id": 4242 },
-  { "notable": "Unstoppable", "id": 5819 },
+  {
+    "notable": "Unstoppable",
+    "id": 5819,
+    "effect": "Action Speed cannot be modified to below Base Value; Movement Speed cannot be modified to below Base Value; 10% increased Movement Speed; Cannot be Stunned"
+  },
   { "notable": "Unstoppable Hero", "id": 33940 },
-  { "notable": "Untiring", "id": 17988 },
+  {
+    "notable": "Untiring",
+    "id": 17988,
+    "effect": "1.5% of Physical Damage prevented from Hits in the past 10 seconds is Regenerated as Life per second; 40% increased Life Regeneration rate"
+  },
   { "notable": "Unwavering Crusade", "id": 19641 },
   { "notable": "Unwavering Faith", "id": 64768 },
-  { "notable": "Unyielding", "id": 62595 },
+  {
+    "notable": "Unyielding",
+    "id": 62595,
+    "effect": "8% increased Damage per Endurance Charge; 25% chance to gain an Endurance Chage when you Stun an Enemy; 10% increased Stun Duration on Enemies per Endurance Chage; 6% increased Area of Effect per Endurance Charge"
+  },
   { "notable": "Valako, Storm's Embrace", "id": 32249 },
   { "notable": "Vile Bastion", "id": 37492 },
   { "notable": "Void Beacon", "id": 27096 },
