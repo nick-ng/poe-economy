@@ -107,8 +107,8 @@ const main = async () => {
             "",
             `### ${as === "!Hidden" ? "Hidden" : as}`,
             "",
-            "| Notable | Effect | Flesh | Flame | Total |",
-            "| :- | :- | -: | -: | -: |",
+            "| Notable | Flesh | Flame | Total |",
+            "| :- | -: | -: | -: |",
           );
           [...ascendancies[baseClass][as]].map((n) => {
             const flesh = notables[n]["Forbidden Flesh"];
@@ -131,7 +131,7 @@ const main = async () => {
               lines.push(
                 `| [${p.notable}](https://www.poewiki.net/wiki/${
                   p.notable.replaceAll(" ", "_")
-                }) | ${p.effect} | [${
+                } "${p.effect}") | [${
                   p.fleshChaosValue.toFixed(1)
                 }c](${p.fleshUrl}) | [${
                   p.flameChaosValue.toFixed(1)
