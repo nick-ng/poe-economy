@@ -23,11 +23,11 @@ const getTradeUrl = (name, variant, league) => {
       "stats": [{
         "type": "and",
         "filters": [{
-          disabled: variant === "Forbidden Flesh",
+          disabled: variant === "Forbidden Flame",
           "id": "explicit.stat_2460506030",
           "value": { "option": notableId.toString() },
         }, {
-          disabled: variant === "Forbidden Flame",
+          disabled: variant === "Forbidden Flesh",
           "id": "explicit.stat_1190333629",
           "value": { "option": notableId.toString() },
         }],
@@ -95,7 +95,7 @@ const main = async () => {
     "",
     "For builds that want Forbidden jewels of their own ascendancy, this can help you find the cheapest set to buy",
     "",
-    "Click on the price to open the trade site",
+    "Hover over the Notable's name to see the effect",
     "",
   );
   Object.keys(ascendancies).sort((a, b) => a.localeCompare(b)).forEach(
