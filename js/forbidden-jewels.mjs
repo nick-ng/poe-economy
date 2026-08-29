@@ -112,7 +112,7 @@ const main = async () => {
               totalChaosValue: flesh.chaosValue + flame.chaosValue,
               effect: flesh.effect.length < MAX_EFFECT_LENGTH
                 ? flesh.effect
-                : `${flesh.slice(0, MAX_EFFECT_LENGTH - 1)}…`,
+                : `${flesh.effect.slice(0, MAX_EFFECT_LENGTH - 1)}…`,
             };
           }).sort((a, b) => a.totalChaosValue - b.totalChaosValue).forEach(
             (p) => {
