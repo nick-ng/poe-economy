@@ -1,6 +1,6 @@
 # Forbidden Jewels
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/forbidden-jewels), fetched at Sun Aug 30 2026 12:26:51 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/forbidden-jewels), fetched at Sun Aug 30 2026 12:30:01 GMT+1200 (New Zealand Standard Time)
 
 For builds that want Forbidden jewels of their own ascendancy, this can help you find the cheapest set to buy
 
