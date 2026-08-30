@@ -157,6 +157,7 @@ const main = async () => {
     }
   }
 
+  redBeastPrices.sort((a, b) => b.chaosValue - a.chaosValue);
   yellowBeastsPrices.sort((a, b) => b.chaosValue - a.chaosValue);
   const yellowBeastMedian =
     yellowBeastsPrices[Math.floor(yellowBeastsPrices.length / 2)].chaosValue;
@@ -169,35 +170,47 @@ const main = async () => {
   const expensiveBeasts = redBeastPrices.filter((r) =>
     r.chaosValue >= redBeastThresholdUpper
   );
+  const expensiveHighPrice = expensiveBeasts[0].chaosValue;
+  const expensiveLowPrice =
+    expensiveBeasts[expensiveBeasts.length - 1].chaosValue;
+  const expensivePriceString = expensiveHighPrice === expensiveLowPrice
+    ? `${expensiveHighPrice}c`
+    : `${expensiveLowPrice}c - ${expensiveHighPrice}c`;
 
   lines.push(...getBeastSubsections(
     expensiveBeasts,
     redBeasts,
-    `\n## Keep (${expensiveBeasts[expensiveBeasts.length - 1].chaosValue}c - ${
-      expensiveBeasts[0].chaosValue
-    }c)`,
+    `\n## Keep (${expensivePriceString})`,
   ));
 
   const borderlineBeasts = redBeastPrices.filter((r) =>
     r.chaosValue < redBeastThresholdUpper &&
     r.chaosValue >= redBeastThresholdLower
   );
-
+  const borderLineHighPrice = borderlineBeasts[0].chaosValue;
+  const borderLineLowPrice =
+    borderlineBeasts[borderlineBeasts.length - 1].chaosValue;
+  const borderLinePriceString = borderLineHighPrice === borderLineLowPrice
+    ? `${borderLineHighPrice}c`
+    : `${borderLineLowPrice}c - ${borderLineHighPrice}c`;
   lines.push(...getBeastSubsections(
     borderlineBeasts,
     redBeasts,
-    `\n## Borderline (${
-      borderlineBeasts[borderlineBeasts.length - 1].chaosValue
-    }c - ${borderlineBeasts[0].chaosValue}c)`,
+    `\n## Borderline (${borderLinePriceString})`,
   ));
 
   const cheapBeasts = redBeastPrices.filter((r) =>
     r.chaosValue < redBeastThresholdLower
   );
+  const cheapHighPrice = cheapBeasts[0].chaosValue;
+  const cheapLowPrice = cheapBeasts[cheapBeasts.length - 1].chaosValue;
+  const cheapPriceString = cheapHighPrice === cheapLowPrice
+    ? `${cheapHighPrice}c`
+    : `${cheapLowPrice}c - ${cheapHighPrice}c`;
   lines.push(...getBeastSubsections(
     cheapBeasts,
     redBeasts,
-    `\n## Trash (under ${redBeastThresholdLower}c)`,
+    `\n## Trash (${cheapPriceString})`,
   ));
 
   await writeFile(join("md-fragments", "BEASTS.md"), lines.join("\n"));

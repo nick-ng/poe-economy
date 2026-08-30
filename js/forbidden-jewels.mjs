@@ -6,7 +6,7 @@ import notableIds from "./forbidden-flesh-flame.json" with { type: "json" };
 
 const lines = [];
 
-const MAX_EFFECT_LENGTH = 30;
+const DIVINE_THRESHOLD = 1.5;
 
 const getTradeUrl = (name, variant, league) => {
   const notableId = notableIds.find((n) => n.notable === name)?.id;
@@ -90,10 +90,13 @@ const main = async () => {
     ascendancies[baseClass][ascendancy].add(l.name);
   });
 
+  const poeNinjaUrl =
+    `https://poe.ninja/poe1/economy/${league.url}/forbidden-jewels`;
+
   lines.push(
     "# Forbidden Jewels",
     "",
-    `[${league.name} League](https://poe.ninja/poe1/economy/${league.url}/forbidden-jewels), fetched at ${new Date()}`,
+    `[${league.name} League](${poeNinjaUrl}), fetched at ${new Date()}`,
     "",
     "For builds that want Forbidden jewels of their own ascendancy, this can help you find the cheapest set to buy",
     "",
@@ -107,7 +110,13 @@ const main = async () => {
         .forEach((as) => {
           lines.push(
             "",
-            `### ${as === "!Hidden" ? "Hidden" : as}`,
+            `### ${
+              as === "!Hidden"
+                ? "Hidden"
+                : `[${as}](${poeNinjaUrl}?${
+                  (new URLSearchParams({ ascendancy: as })).toString()
+                })`
+            }`,
             "",
             "| Notable | Flesh | Flame | Total |",
             "| :- | -: | -: | -: |",
@@ -116,28 +125,59 @@ const main = async () => {
             const flesh = notables[n]["Forbidden Flesh"];
             const flame = notables[n]["Forbidden Flame"];
 
+            const jewelPoeNinjaUrl = `${poeNinjaUrl}?${
+              (new URLSearchParams({ name: n })).toString()
+            }`;
+
+            if (!flesh || !flame) {
+              return {
+                notable: n,
+                fleshChaosValue: -1,
+                fleshDivineValue: -1,
+                fleshPriceString: "???",
+                fleshUrl: jewelPoeNinjaUrl,
+                flameChaosValue: -1,
+                flameDivineValue: -1,
+                flamePriceString: "???",
+                flameUrl: jewelPoeNinjaUrl,
+                effect: flesh.effect,
+                totalPriceString: "???",
+                poeNinjaUrl: jewelPoeNinjaUrl,
+              };
+            }
+
             return {
               notable: n,
               fleshChaosValue: flesh.chaosValue,
+              fleshDivineValue: flesh.divineValue,
+              fleshPriceString: flesh.divineValue >= DIVINE_THRESHOLD
+                ? `**${flesh.divineValue.toFixed(1)} d**`
+                : `${flesh.chaosValue.toFixed(1)} c`,
               fleshUrl: flesh.tradeUrl,
               flameChaosValue: flame.chaosValue,
+              flameDivineValue: flame.divineValue,
+              flamePriceString: flame.divineValue >= DIVINE_THRESHOLD
+                ? `**${flame.divineValue.toFixed(1)} d**`
+                : `${flame.chaosValue.toFixed(1)} c`,
               flameUrl: flame.tradeUrl,
-              totalChaosValue: flesh.chaosValue + flame.chaosValue,
               effect: flesh.effect,
-              // effect: flesh.effect.length < MAX_EFFECT_LENGTH
-              //   ? flesh.effect
-              //   : `${flesh.effect.slice(0, MAX_EFFECT_LENGTH - 1)}…`,
+              totalPriceString:
+                (flesh.divineValue + flame.divineValue) >= DIVINE_THRESHOLD
+                  ? `**${
+                    (flesh.divineValue + flame.divineValue).toFixed(1)
+                  } d**`
+                  : `${(flesh.chaosValue + flame.chaosValue).toFixed(1)} c`,
+              poeNinjaUrl: jewelPoeNinjaUrl,
             };
-          }).sort((a, b) => a.totalChaosValue - b.totalChaosValue).forEach(
+          }).sort((a, b) =>
+            (a.fleshChaosValue + a.flameChaosValue) -
+            (b.fleshChaosValue + b.flameChaosValue)
+          ).forEach(
             (p) => {
               lines.push(
                 `| [${p.notable}](https://www.poewiki.net/wiki/${
                   p.notable.replaceAll(" ", "_")
-                } "${p.effect}") | [${
-                  p.fleshChaosValue.toFixed(1)
-                }c](${p.fleshUrl}) | [${
-                  p.flameChaosValue.toFixed(1)
-                }c](${p.flameUrl}) | ${p.totalChaosValue.toFixed(1)}c |`,
+                } "${p.effect}") | [${p.fleshPriceString}](${p.fleshUrl}) | [${p.flamePriceString}](${p.flameUrl}) | [${p.totalPriceString}](${p.poeNinjaUrl}) |`,
               );
             },
           );
