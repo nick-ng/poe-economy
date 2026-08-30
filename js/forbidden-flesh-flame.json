@@ -89,12 +89,24 @@
   { "notable": "Essence Glutton", "id": 3554 },
   { "notable": "Experienced Herbalist", "id": 29662 },
   { "notable": "Far Shot", "id": 45313 },
-  { "notable": "Fatal Flourish", "id": 42469 },
-  { "notable": "First to Strike, Last to Fall", "id": 27604 },
+  {
+    "notable": "Fatal Flourish",
+    "id": 42469,
+    "effect": "Non-Travel Attack Skills Repeat an additional Time; Final Repeat of Attack Skills deal 60% more Damage"
+  },
+  {
+    "notable": "First to Strike, Last to Fall",
+    "id": 27604,
+    "effect": "Your Hits permanently Intimidate Enemies that are on Full Life; Gain Adrenaline for 20 seconds when you reach Low Life; Remove all Ailments and Burning when you gain Adrenaline; Recover 25% of Life when you gain Adrenaline"
+  },
   { "notable": "Focal Point", "id": 5443 },
   { "notable": "For the Jugular", "id": 18335 },
   { "notable": "Forbidden Power", "id": 62504 },
-  { "notable": "Fortitude", "id": 31700 },
+  {
+    "notable": "Fortitude",
+    "id": 31700,
+    "effect": "You have your maximum Fortification; Nearby Allies count as having Fortification equal to yours"
+  },
   { "notable": "Frigid Wake", "id": 47630 },
   { "notable": "Fury of Nature", "id": 18054 },
   { "notable": "Gathering Winds", "id": 24848 },
@@ -115,7 +127,11 @@
   { "notable": "Inevitable Judgement", "id": 48214 },
   { "notable": "Infused Toxins", "id": 21192 },
   { "notable": "Inquisitor", "id": 43962 },
-  { "notable": "Inspirational", "id": 11412 },
+  {
+    "notable": "Inspirational",
+    "id": 11412,
+    "effect": "30% increased effect of Non-Curse Auras from your skills; When you leave your banner's Area, recover 30% of the Valour consumed for that Banner; You and Allies near your Banner Regenerate 0.1% of Life per Second for each Valour consumed for that Banner"
+  },
   { "notable": "Instruments of Justice", "id": 3154 },
   { "notable": "Instruments of Virtue", "id": 19417 },
   { "notable": "Instruments of Zeal", "id": 13851 },
@@ -130,7 +146,11 @@
   { "notable": "Master Distiller", "id": 6038 },
   { "notable": "Master Surgeon", "id": 63293 },
   { "notable": "Master Toxicist", "id": 1697 },
-  { "notable": "Master of Metal", "id": 13374 },
+  {
+    "notable": "Master of Metal",
+    "id": 13374,
+    "effect": "Impales you inflict last 1 additional Hit; If you've Impaled an Enemy Recently, you and nearby Allies have +1000 to Armour; You and nearby Allies deal 6 to 12 added Physical Damage for each Impale on Enemy"
+  },
   { "notable": "Masterful Form", "id": 16306 },
   { "notable": "Mastermind of Discord", "id": 61259 },
   { "notable": "Measured Retaliation", "id": 63490 },
@@ -221,7 +241,11 @@
     "id": 5819,
     "effect": "Action Speed cannot be modified to below Base Value; Movement Speed cannot be modified to below Base Value; 10% increased Movement Speed; Cannot be Stunned"
   },
-  { "notable": "Unstoppable Hero", "id": 33940 },
+  {
+    "notable": "Unstoppable Hero",
+    "id": 33940,
+    "effect": "3% increased Attack Speed per Fortification above 20; 3% more Armour and Evasion Rating per Fortification above 20"
+  },
   {
     "notable": "Untiring",
     "id": 17988,
@@ -243,6 +267,14 @@
   { "notable": "Weapon Master", "id": 52575 },
   { "notable": "Wind Ward", "id": 23169 },
   { "notable": "Withering Presence", "id": 25309 },
-  { "notable": "Worthy Causes", "id": 35750 },
-  { "notable": "Worthy Foe", "id": 56967 }
+  {
+    "notable": "Worthy Causes",
+    "id": 35750,
+    "effect": "Having a placed Banner does not prevent you gaining Valour; Banner Skills have 100% increased Duration"
+  },
+  {
+    "notable": "Worthy Foe",
+    "id": 56967,
+    "effect": "Enemies Taunted by you take 15% increased Damage; Enemies Taunted by you cannot Evade Attacks; Taunt on Hit"
+  }
 ]
