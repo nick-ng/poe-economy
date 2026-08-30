@@ -1,21 +1,21 @@
 # Beasts
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Sun Aug 30 2026 12:19:39 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/beasts), fetched at Sun Aug 30 2026 12:25:58 GMT+1200 (New Zealand Standard Time)
 
 Yellow Beasts: 2c
 
 
-## Keep (5c - 524.8c)
+## Keep (5c - 508.4c)
 
 ```
-cic c|ck m|l pl|bris|ld h|arru|numu|l cy|id v|l cr|aice|qawa|bleb|c ti|id w|cic m
+ck m|cic c|l pl|bris|ld h|arru|numu|l cy|id v|l cr|aice|qawa|bleb|c ti|id w|cic m
 ```
 
 <details><summary> Beast Prices </summary><ul>
-<li>Craicic Croaker: 524.8c</li>
-<li>Black Mórrigan: 521c</li>
+<li>Black Mórrigan: 508.4c</li>
+<li>Craicic Croaker: 488.5c</li>
 <li>Fenumal Plagued Arachnid: 280c</li>
-<li>Wild Bristle Matron: 140c</li>
+<li>Wild Bristle Matron: 125c</li>
 <li>Wild Hellion Alpha: 35c</li>
 <li>Farrul, First of the Plains: 34.2c</li>
 <li>Fenumus, First of the Night: 31c</li>
@@ -24,7 +24,7 @@ cic c|ck m|l pl|bris|ld h|arru|numu|l cy|id v|l cr|aice|qawa|bleb|c ti|id w|cic 
 <li>Primal Crushclaw: 30c</li>
 <li>Craiceann, First of the Deep: 25c</li>
 <li>Saqawal, First of the Sky: 20c</li>
-<li>Wild Brambleback: 20c</li>
+<li>Wild Brambleback: 19c</li>
 <li>Farric Tiger Alpha: 7c</li>
 <li>Vivid Watcher: 7c</li>
 <li>Craicic Maw: 5c</li>
@@ -73,16 +73,16 @@ ex m|c fl|ine rho|c sav|al w|c pi|c gol|c sh|magm|c ta|c goa|ic u|c ch
 <li>Fenumal Scrabbler: 1c</li>
 <li>Vivid Abberarach: 1c</li>
 <li>Primal Rhex Matriarch: 1c</li>
-<li>Farric Flame Hellion Alpha: 0.98c</li>
-<li>Saqawine Rhoa: 0.92c</li>
-<li>Craicic Savage Crab: 0.81c</li>
-<li>Fenumal Widow: 0.81c</li>
-<li>Farric Pit Hound: 0.81c</li>
+<li>Farric Flame Hellion Alpha: 0.96c</li>
+<li>Saqawine Rhoa: 0.93c</li>
+<li>Craicic Savage Crab: 0.82c</li>
+<li>Fenumal Widow: 0.82c</li>
+<li>Farric Pit Hound: 0.82c</li>
 <li>Farric Goliath: 0.68c</li>
-<li>Craicic Shield Crab: 0.6c</li>
+<li>Craicic Shield Crab: 0.63c</li>
 <li>Farric Magma Hound: 0.52c</li>
 <li>Farric Taurus: 0.41c</li>
 <li>Farric Goatman: 0.41c</li>
-<li>Farric Ursa: 0.35c</li>
+<li>Farric Ursa: 0.36c</li>
 <li>Farric Chieftain: 0.23c</li>
 </ul></details>

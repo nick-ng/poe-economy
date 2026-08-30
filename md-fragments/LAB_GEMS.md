@@ -1,66 +1,66 @@
 # merclab
 
-[Allflame League](https://poe.ninja/poe1/economy/allflame/skill-gems), fetched at Sun Aug 30 2026 12:19:39 GMT+1200 (New Zealand Standard Time)
+[Allflame League](https://poe.ninja/poe1/economy/allflame/skill-gems), fetched at Sun Aug 30 2026 12:25:58 GMT+1200 (New Zealand Standard Time)
 
 The following prices are for gem level < 20 and quality < 20
 
-## Transform a Skill Gem to be a random Transfigured Gem of the same colour - 17.5c
+## Transform a Skill Gem to be a random Transfigured Gem of the same colour - 17.3c
 
 Colour | Top 5 | EV
 :- | :- | -:
-🔴 red | [Summon Stone Golem of Safeguarding (140.0c)](https://poe.ninja/economy/allflame/skill-gems/summon-stone-golem-of-safeguarding-1), [Smite of Divine Judgement (110.1c)](https://poe.ninja/economy/allflame/skill-gems/smite-of-divine-judgement-1), [Volcanic Fissure of Snaking (110.0c)](https://poe.ninja/economy/allflame/skill-gems/volcanic-fissure-of-snaking-1), [Static Strike of Gathering Lightning (87.0c)](https://poe.ninja/economy/allflame/skill-gems/static-strike-of-gathering-lightning-1), [Reap of Butchery (67.7c)](https://poe.ninja/economy/allflame/skill-gems/reap-of-butchery-1) | 17.5c
-🟢 green | [Volatile Dead of Seething (180.0c)](https://poe.ninja/economy/allflame/skill-gems/volatile-dead-of-seething-1), [Cyclone of Tumult (115.0c)](https://poe.ninja/economy/allflame/skill-gems/cyclone-of-tumult-1), [Ethereal Knives of the Massacre (99.8c)](https://poe.ninja/economy/allflame/skill-gems/ethereal-knives-of-the-massacre-1), [Animate Weapon of Ranged Arms (62.5c)](https://poe.ninja/economy/allflame/skill-gems/animate-weapon-of-ranged-arms-1), [Elemental Hit of the Spectrum (60.0c)](https://poe.ninja/economy/allflame/skill-gems/elemental-hit-of-the-spectrum-1) | 14.6c
-🔵 blue | [Frostblink of Wintry Blast (190.7c)](https://poe.ninja/economy/allflame/skill-gems/frostblink-of-wintry-blast-1), [Righteous Fire of Arcane Devotion (140.0c)](https://poe.ninja/economy/allflame/skill-gems/righteous-fire-of-arcane-devotion-1), [Lightning Tendrils of Escalation (100.0c)](https://poe.ninja/economy/allflame/skill-gems/lightning-tendrils-of-escalation-1), [Arc of Oscillating (60.0c)](https://poe.ninja/economy/allflame/skill-gems/arc-of-oscillating-1), [Lightning Tendrils of Eccentricity (45.0c)](https://poe.ninja/economy/allflame/skill-gems/lightning-tendrils-of-eccentricity-1) | 11.9c
+🔴 red | [Summon Stone Golem of Safeguarding (140.0c)](https://poe.ninja/economy/allflame/skill-gems/summon-stone-golem-of-safeguarding-1), [Smite of Divine Judgement (110.1c)](https://poe.ninja/economy/allflame/skill-gems/smite-of-divine-judgement-1), [Volcanic Fissure of Snaking (110.0c)](https://poe.ninja/economy/allflame/skill-gems/volcanic-fissure-of-snaking-1), [Static Strike of Gathering Lightning (85.0c)](https://poe.ninja/economy/allflame/skill-gems/static-strike-of-gathering-lightning-1), [Reap of Butchery (65.0c)](https://poe.ninja/economy/allflame/skill-gems/reap-of-butchery-1) | 17.3c
+🟢 green | [Volatile Dead of Seething (180.0c)](https://poe.ninja/economy/allflame/skill-gems/volatile-dead-of-seething-1), [Cyclone of Tumult (115.0c)](https://poe.ninja/economy/allflame/skill-gems/cyclone-of-tumult-1), [Ethereal Knives of the Massacre (100.0c)](https://poe.ninja/economy/allflame/skill-gems/ethereal-knives-of-the-massacre-1), [Animate Weapon of Ranged Arms (62.5c)](https://poe.ninja/economy/allflame/skill-gems/animate-weapon-of-ranged-arms-1), [Elemental Hit of the Spectrum (60.0c)](https://poe.ninja/economy/allflame/skill-gems/elemental-hit-of-the-spectrum-1) | 14.7c
+🔵 blue | [Frostblink of Wintry Blast (190.0c)](https://poe.ninja/economy/allflame/skill-gems/frostblink-of-wintry-blast-1), [Righteous Fire of Arcane Devotion (140.0c)](https://poe.ninja/economy/allflame/skill-gems/righteous-fire-of-arcane-devotion-1), [Lightning Tendrils of Escalation (100.0c)](https://poe.ninja/economy/allflame/skill-gems/lightning-tendrils-of-escalation-1), [Arc of Oscillating (79.4c)](https://poe.ninja/economy/allflame/skill-gems/arc-of-oscillating-1), [Lightning Tendrils of Eccentricity (41.6c)](https://poe.ninja/economy/allflame/skill-gems/lightning-tendrils-of-eccentricity-1) | 12.0c
 
-## Transform a non-Transfigured Skill Gem to a Transfigured version - 190.7c
+## Transform a non-Transfigured Skill Gem to a Transfigured version - 190.0c
 Normal Gem | # | Transfigured Gems | EV
  :- | -: | :- | -: 
-[Frostblink](https://www.poewiki.net/wiki/Frostblink) | 1 | [Frostblink of Wintry Blast (190.7c)](https://poe.ninja/economy/allflame/skill-gems/frostblink-of-wintry-blast-1) | 190.7c
+[Frostblink](https://www.poewiki.net/wiki/Frostblink) | 1 | [Frostblink of Wintry Blast (190.0c)](https://poe.ninja/economy/allflame/skill-gems/frostblink-of-wintry-blast-1) | 190.0c
 [Volatile Dead](https://www.poewiki.net/wiki/Volatile_Dead) | 2 | [Volatile Dead of Seething (180.0c)](https://poe.ninja/economy/allflame/skill-gems/volatile-dead-of-seething-1), [Volatile Dead of Confinement (3.0c)](https://poe.ninja/economy/allflame/skill-gems/volatile-dead-of-confinement-1) | 180.0c
 [Summon Stone Golem](https://www.poewiki.net/wiki/Summon_Stone_Golem) | 2 | [Summon Stone Golem of Safeguarding (140.0c)](https://poe.ninja/economy/allflame/skill-gems/summon-stone-golem-of-safeguarding-1), [Summon Stone Golem of Hordes (5.0c)](https://poe.ninja/economy/allflame/skill-gems/summon-stone-golem-of-hordes-1) | 140.0c
 [Righteous Fire](https://www.poewiki.net/wiki/Righteous_Fire) | 1 | [Righteous Fire of Arcane Devotion (140.0c)](https://poe.ninja/economy/allflame/skill-gems/righteous-fire-of-arcane-devotion-1) | 140.0c
 [Cyclone](https://www.poewiki.net/wiki/Cyclone) | 1 | [Cyclone of Tumult (115.0c)](https://poe.ninja/economy/allflame/skill-gems/cyclone-of-tumult-1) | 115.0c
 [Smite](https://www.poewiki.net/wiki/Smite) | 1 | [Smite of Divine Judgement (110.1c)](https://poe.ninja/economy/allflame/skill-gems/smite-of-divine-judgement-1) | 110.1c
 [Volcanic Fissure](https://www.poewiki.net/wiki/Volcanic_Fissure) | 1 | [Volcanic Fissure of Snaking (110.0c)](https://poe.ninja/economy/allflame/skill-gems/volcanic-fissure-of-snaking-1) | 110.0c
-[Lightning Tendrils](https://www.poewiki.net/wiki/Lightning_Tendrils) | 2 | [Lightning Tendrils of Escalation (100.0c)](https://poe.ninja/economy/allflame/skill-gems/lightning-tendrils-of-escalation-1), [Lightning Tendrils of Eccentricity (45.0c)](https://poe.ninja/economy/allflame/skill-gems/lightning-tendrils-of-eccentricity-1) | 100.0c
-[Ethereal Knives](https://www.poewiki.net/wiki/Ethereal_Knives) | 2 | [Ethereal Knives of the Massacre (99.8c)](https://poe.ninja/economy/allflame/skill-gems/ethereal-knives-of-the-massacre-1), [Ethereal Knives of Lingering Blades (30.0c)](https://poe.ninja/economy/allflame/skill-gems/ethereal-knives-of-lingering-blades-1) | 99.8c
-[Static Strike](https://www.poewiki.net/wiki/Static_Strike) | 1 | [Static Strike of Gathering Lightning (87.0c)](https://poe.ninja/economy/allflame/skill-gems/static-strike-of-gathering-lightning-1) | 87.0c
+[Ethereal Knives](https://www.poewiki.net/wiki/Ethereal_Knives) | 2 | [Ethereal Knives of the Massacre (100.0c)](https://poe.ninja/economy/allflame/skill-gems/ethereal-knives-of-the-massacre-1), [Ethereal Knives of Lingering Blades (30.0c)](https://poe.ninja/economy/allflame/skill-gems/ethereal-knives-of-lingering-blades-1) | 100.0c
+[Lightning Tendrils](https://www.poewiki.net/wiki/Lightning_Tendrils) | 2 | [Lightning Tendrils of Escalation (100.0c)](https://poe.ninja/economy/allflame/skill-gems/lightning-tendrils-of-escalation-1), [Lightning Tendrils of Eccentricity (41.6c)](https://poe.ninja/economy/allflame/skill-gems/lightning-tendrils-of-eccentricity-1) | 100.0c
+[Static Strike](https://www.poewiki.net/wiki/Static_Strike) | 1 | [Static Strike of Gathering Lightning (85.0c)](https://poe.ninja/economy/allflame/skill-gems/static-strike-of-gathering-lightning-1) | 85.0c
 
 <details><summary> All Gems </summary>
 
 ```
-- 190.7 Frostblink (1, Frostblink of Wintry Blast)
+- 190.0 Frostblink (1, Frostblink of Wintry Blast)
 - 180.0 Volatile Dead (2, Volatile Dead of Seething, Volatile Dead of Confinement)
 - 140.0 Summon Stone Golem (2, Summon Stone Golem of Safeguarding, Summon Stone Golem of Hordes)
 - 140.0 Righteous Fire (1, Righteous Fire of Arcane Devotion)
 - 115.0 Cyclone (1, Cyclone of Tumult)
 - 110.1 Smite (1, Smite of Divine Judgement)
 - 110.0 Volcanic Fissure (1, Volcanic Fissure of Snaking)
+- 100.0 Ethereal Knives (2, Ethereal Knives of the Massacre, Ethereal Knives of Lingering Blades)
 - 100.0 Lightning Tendrils (2, Lightning Tendrils of Escalation, Lightning Tendrils of Eccentricity)
-- 99.8 Ethereal Knives (2, Ethereal Knives of the Massacre, Ethereal Knives of Lingering Blades)
-- 87.0 Static Strike (1, Static Strike of Gathering Lightning)
-- 67.7 Reap (1, Reap of Butchery)
+- 85.0 Static Strike (1, Static Strike of Gathering Lightning)
+- 79.4 Arc (5, Arc of Oscillating, Arc of Surging, Arcanist Brand, Arctic Armour, Arcane Cloak)
+- 65.0 Reap (1, Reap of Butchery)
 - 62.5 Animate Weapon (2, Animate Weapon of Ranged Arms, Animate Weapon of Self Reflection)
 - 60.0 Elemental Hit (1, Elemental Hit of the Spectrum)
-- 60.0 Arc (5, Arc of Oscillating, Arc of Surging, Arcanist Brand, Arctic Armour, Arcane Cloak)
+- 55.0 Dual Strike (1, Dual Strike of Ambidexterity)
 - 50.0 Lancing Steel (1, Lancing Steel of Spraying)
 - 50.0 Poisonous Concoction (1, Poisonous Concoction of Bouncing)
-- 49.6 Dual Strike (1, Dual Strike of Ambidexterity)
 - 40.0 Detonate Dead (2, Detonate Dead of Scavenging, Detonate Dead of Chain Reaction)
 - 40.0 Firestorm (2, Firestorm of Pelting, Firestorm of Meteors)
-- 40.0 Kinetic Blast (1, Kinetic Blast of Clustering)
-- 39.3 Lightning Strike (1, Lightning Strike of Arcing)
+- 39.7 Kinetic Blast (1, Kinetic Blast of Clustering)
+- 39.0 Lightning Strike (1, Lightning Strike of Arcing)
 - 30.0 Ground Slam (1, Ground Slam of Earthshaking)
 - 30.0 Viper Strike (1, Viper Strike of the Mamba)
 - 30.0 Blade Blast (2, Blade Blast of Unloading, Blade Blast of Dagger Detonation)
-- 25.0 Ball Lightning (2, Ball Lightning of Static, Ball Lightning of Orbiting)
-- 20.0 Toxic Rain (2, Toxic Rain of Withering, Toxic Rain of Sporeburst)
+- 22.0 Ball Lightning (2, Ball Lightning of Static, Ball Lightning of Orbiting)
+- 19.7 Toxic Rain (2, Toxic Rain of Withering, Toxic Rain of Sporeburst)
 - 19.2 Lacerate (2, Lacerate of Butchering, Lacerate of Haemorrhage)
+- 19.0 Tornado (3, Tornado of Elemental Turbulence, Tornado Shot of Cloudburst, Tornado Shot)
 - 19.0 Crackling Lance (2, Crackling Lance of Branching, Crackling Lance of Disintegration)
-- 18.3 Tornado (3, Tornado of Elemental Turbulence, Tornado Shot of Cloudburst, Tornado Shot)
 - 18.0 Blight (2, Blight of Contagion, Blight of Atrophy)
-- 18.0 Forbidden Rite (1, Forbidden Rite of Soul Sacrifice)
 - 18.0 Storm Burst (1, Storm Burst of Repulsion)
+- 17.9 Forbidden Rite (1, Forbidden Rite of Soul Sacrifice)
 - 17.4 Icicle Mine (2, Icicle Mine of Fanning, Icicle Mine of Sabotage)
 - 15.0 Hexblast (2, Hexblast of Contradiction, Hexblast of Havoc)
 - 15.0 Penance Brand (2, Penance Brand of Dissipation, Penance Brand of Conduction)
@@ -79,24 +79,25 @@ Normal Gem | # | Transfigured Gems | EV
 - 10.0 Shock Nova (1, Shock Nova of Procession)
 - 10.0 Soulrend (2, Soulrend of Reaping, Soulrend of the Spiral)
 - 10.0 Summon Holy Relic (1, Summon Holy Relic of Conviction)
-- 9.7 Summon Flame Golem (2, Summon Flame Golem of Hordes, Summon Flame Golem of the Meteor)
+- 9.8 Summon Flame Golem (2, Summon Flame Golem of Hordes, Summon Flame Golem of the Meteor)
 - 9.1 Rage Vortex (1, Rage Vortex of Berserking)
 - 9.0 Shield Crush (1, Shield Crush of the Chieftain)
-- 8.2 Ice Nova (2, Ice Nova of Frostbolts, Ice Nova of Deep Freeze)
 - 8.1 Ice Shot (1, Ice Shot of Penetration)
-- 8.0 Leap Slam (1, Leap Slam of Groundbreaking)
 - 8.0 Molten Strike (1, Molten Strike of the Zenith)
 - 8.0 Reave (1, Reave of Refraction)
 - 8.0 Incinerate (2, Incinerate of Venting, Incinerate of Expanse)
+- 7.8 Essence Drain (2, Essence Drain of Wickedness, Essence Drain of Desperation)
+- 7.4 Leap Slam (1, Leap Slam of Groundbreaking)
+- 7.2 Summon Raging Spirit (1, Summon Raging Spirit of Enormity)
 - 7.0 Flameblast (2, Flameblast of Celerity, Flameblast of Contraction)
 - 7.0 Glacial Cascade (1, Glacial Cascade of the Fissure)
-- 7.0 Summon Raging Spirit (1, Summon Raging Spirit of Enormity)
-- 7.0 Summon Skeletons (2, Summon Skeletons of Mages, Summon Skeletons of Archers)
+- 7.0 Ice Nova (2, Ice Nova of Frostbolts, Ice Nova of Deep Freeze)
 - 6.8 Mirror Arrow (2, Mirror Arrow of Bombarding Clones, Mirror Arrow of Prismatic Clones)
-- 6.8 Essence Drain (2, Essence Drain of Wickedness, Essence Drain of Desperation)
 - 6.8 Flame Dash (1, Flame Dash of Return)
+- 6.8 Summon Skeletons (2, Summon Skeletons of Mages, Summon Skeletons of Archers)
 - 6.0 Barrage (1, Barrage of Volley Fire)
 - 6.0 Pyroclast Mine (1, Pyroclast Mine of Sabotage)
+- 5.4 Void Sphere (1, Void Sphere of Rending)
 - 5.3 Animate Guardian (1, Animate Guardian of Smiting)
 - 5.2 Chain Hook (1, Chain Hook of Angling)
 - 5.0 Consecrated Path (1, Consecrated Path of Endurance)
@@ -108,26 +109,25 @@ Normal Gem | # | Transfigured Gems | EV
 - 5.0 Bane (1, Bane of Condemnation)
 - 5.0 Cold Snap (1, Cold Snap of Power)
 - 5.0 Creeping Frost (1, Creeping Frost of Floes)
-- 5.0 Void Sphere (1, Void Sphere of Rending)
+- 5.0 Lightning Conduit (1, Lightning Conduit of the Heavens)
 - 5.0 Vortex (1, Vortex of Projection)
-- 4.9 Ice Spear (1, Ice Spear of Splitting)
 - 4.4 Ice Crash (1, Ice Crash of Cadence)
 - 4.4 Blink Arrow (2, Blink Arrow of Prismatic Clones, Blink Arrow of Bombarding Clones)
-- 4.3 Lightning Conduit (1, Lightning Conduit of the Heavens)
 - 4.0 Absolution (1, Absolution of Inspiring)
 - 4.0 Scourge Arrow (1, Scourge Arrow of Menace)
 - 4.0 Bodyswap (1, Bodyswap of Sacrifice)
-- 4.0 Kinetic Rain (1, Kinetic Rain of Impact)
-- 4.0 Kinetic Rain (1, Kinetic Rain of Impact)
+- 4.0 Ice Spear (1, Ice Spear of Splitting)
 - 4.0 Storm Rain (2, Storm Rain of the Conduit, Storm Rain of the Fence)
 - 4.0 Summon Chaos Golem (2, Summon Chaos Golem of the Maelström, Summon Chaos Golem of Hordes)
+- 3.6 Summon Ice Golem (2, Summon Ice Golem of Hordes, Summon Ice Golem of Shattering)
 - 3.1 Kinetic Bolt (1, Kinetic Bolt of Fragmentation)
+- 3.1 Kinetic Rain (1, Kinetic Rain of Impact)
+- 3.1 Kinetic Rain (1, Kinetic Rain of Impact)
 - 3.0 Divine Blast (1, Divine Blast of Radiance)
 - 3.0 Holy Hammers (1, Holy Hammers of Spirals)
 - 3.0 Perforate (2, Perforate of Bloodshed, Perforate of Duality)
 - 3.0 Blade Vortex (1, Blade Vortex of the Scythe)
 - 3.0 Puncture (1, Puncture of Shanking)
-- 3.0 Summon Ice Golem (2, Summon Ice Golem of Hordes, Summon Ice Golem of Shattering)
 - 3.0 Divine Ire (2, Divine Ire of Holy Lightning, Divine Ire of Disintegration)
 - 3.0 Lightning Trap (1, Lightning Trap of Sparking)
 - 3.0 Storm Brand (1, Storm Brand of Indecision)
@@ -150,7 +150,7 @@ Normal Gem | # | Transfigured Gems | EV
 - 2.0 Siphoning Trap (1, Siphoning Trap of Pain)
 - 2.0 Stormbind (1, Stormbind of Teleportation)
 - 1.6 Cleave (1, Cleave of Rage)
-- 1.1 Orb of Storms (1, Orb of Storms of Squalls)
+- 1.2 Orb of Storms (1, Orb of Storms of Squalls)
 - 1.0 Earthquake (1, Earthquake of Amplification)
 - 1.0 Earthshatter (2, Earthshatter of Fragility, Earthshatter of Prominence)
 - 1.0 Frozen Legion (1, Frozen Legion of Rallying)
@@ -187,20 +187,20 @@ Normal Gem | # | Transfigured Gems | EV
 
 </details>
 
-## Exchange a Support Gem for a random Exceptional Gem - 139.8c
+## Exchange a Support Gem for a random Exceptional Gem - 138.3c
 
 Exceptional Gem | Price
  :- | -: 
 [Enlighten Support](https://poe.ninja/economy/allflame/skill-gems/enlighten-support-1) | 220.0c
-[Empower Support](https://poe.ninja/economy/allflame/skill-gems/empower-support-1) | 194.5c
+[Empower Support](https://poe.ninja/economy/allflame/skill-gems/empower-support-1) | 190.0c
 [Enhance Support](https://poe.ninja/economy/allflame/skill-gems/enhance-support-1) | 5.0c
-Average | 139.8c
+Average | 138.3c
 
-## Expected Value per Lab: 30.9c
+## Expected Value per Lab: 30.7c
 
 Divine Font | EV | Appearance Rate
  :- | -: | -: 
-Transform a Skill Gem to be a random Transfigured Gem of the same colour | 17.5c | 100.0%
-Transform a non-Transfigured Skill Gem to be a random Transfigured version | 190.7c | 6.0%
-Exchange a Support Gem for a random Exceptional Gem | 139.8c | 2.5%
-Average | 30.9c | -
+Transform a Skill Gem to be a random Transfigured Gem of the same colour | 17.3c | 100.0%
+Transform a non-Transfigured Skill Gem to be a random Transfigured version | 190.0c | 6.0%
+Exchange a Support Gem for a random Exceptional Gem | 138.3c | 2.5%
+Average | 30.7c | -
