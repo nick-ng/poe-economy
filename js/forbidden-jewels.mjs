@@ -24,12 +24,10 @@ const getTradeUrl = (name, variant, league) => {
         "type": "and",
         "filters": [{
           disabled: variant === "Forbidden Flame",
-          "id": "explicit.stat_2460506030",
-          "value": { "option": notableId.toString() },
+          "id": `explicit.stat_2460506030|${notableId}`,
         }, {
           disabled: variant === "Forbidden Flesh",
-          "id": "explicit.stat_1190333629",
-          "value": { "option": notableId.toString() },
+          "id": `explicit.stat_1190333629|${notableId}`,
         }],
       }],
     },
@@ -170,8 +168,8 @@ const main = async () => {
               poeNinjaUrl: jewelPoeNinjaUrl,
             };
           }).sort((a, b) =>
-            (a.fleshChaosValue + a.flameChaosValue) -
-            (b.fleshChaosValue + b.flameChaosValue)
+            (b.fleshChaosValue + b.flameChaosValue) -
+            (a.fleshChaosValue + a.flameChaosValue)
           ).forEach(
             (p) => {
               lines.push(
