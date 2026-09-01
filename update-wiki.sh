@@ -25,11 +25,6 @@ git add .
 
 git commit -m "chore: auto update - $(date)"
 
-if git diff --cached --quiet; then
-  echo "Wiki already up to date."
-  exit 0
-fi
-
-git push --quiet
+git push
 
 echo "Published to https://github.com/${repository}/wiki"
