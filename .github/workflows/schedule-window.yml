@@ -1,0 +1,40 @@
+name: Schedule window
+
+on:
+  schedule:
+    - cron: '5 10 * * *'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+env:
+  WINDOW_WORKFLOW: league-start.yml
+  OFF_WINDOW_WORKFLOW: normal.yml
+  WINDOW_START: '2026-07-25'
+  WINDOW_END: '2026-07-28'
+
+jobs:
+  toggle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable whichever workflow suits today, disable the other
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          today=$(date -u +%F)
+
+          # ISO-8601 dates compare correctly as plain strings, so no date maths
+          if [[ ! "$today" < "$WINDOW_START" && ! "$today" > "$WINDOW_END" ]]; then
+            enabled=$WINDOW_WORKFLOW
+            disabled=$OFF_WINDOW_WORKFLOW
+          else
+            enabled=$OFF_WINDOW_WORKFLOW
+            disabled=$WINDOW_WORKFLOW
+          fi
+
+          echo "$today -> enable $enabled, disable $disabled"
+          # Disable first so a slow pair of API calls never leaves both schedules live
+          gh workflow disable "$disabled" -R "$GITHUB_REPOSITORY"
+          gh workflow enable  "$enabled"  -R "$GITHUB_REPOSITORY"

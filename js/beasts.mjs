@@ -213,7 +213,7 @@ const main = async () => {
     `\n## Trash (${cheapPriceString})`,
   ));
 
-  await writeFile(join("md-fragments", "BEASTS.md"), lines.join("\n"));
+  await writeFile(join("wiki-temp", "BEASTS.md"), lines.join("\n"));
 };
 
 main();
