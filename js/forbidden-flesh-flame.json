@@ -66,7 +66,11 @@
   },
   { "notable": "Born in the Shadows", "id": 5087 },
   { "notable": "Bringer of Ruin", "id": 258 },
-  { "notable": "Brutal Fervour", "id": 10143 },
+  {
+    "notable": "Brutal Fervour",
+    "id": 10143,
+    "effect": "Life Leech effects are not removed when Unreserved Life is Filled&#10;10% reduced Damage taken while Leeching&#10;100% increased Maximum Recovery per Life Leech"
+  },
   { "notable": "Calculated Risk", "id": 14103 },
   { "notable": "Chain Reaction", "id": 38918 },
   { "notable": "Champion", "id": 39598 },
@@ -86,7 +90,11 @@
   },
   { "notable": "Divine Guidance", "id": 922 },
   { "notable": "Elementalist", "id": 8281 },
-  { "notable": "Endless Hunger", "id": 34484 },
+  {
+    "notable": "Endless Hunger",
+    "id": 34484,
+    "effect": "20% of Overkill Damage is Leeched as Life&#10;You are Unaffected by Bleeding while Leeching&#10;Cannot be Stunned while Leeching&#10;20% increased Attack Speed while Leeching"
+  },
   { "notable": "Endless Munitions", "id": 26067 },
   { "notable": "Enduring Suffusion", "id": 40104 },
   { "notable": "Escape Artist", "id": 29825 },
@@ -124,13 +132,21 @@
   { "notable": "Guardian", "id": 30919 },
   { "notable": "Harmony of Purpose", "id": 61372 },
   { "notable": "Harness the Void", "id": 57331 },
-  { "notable": "Headsman", "id": 3184 },
+  {
+    "notable": "Headsman",
+    "id": 3184,
+    "effect": "Gain 10% increased Movement Speed for 20 seconds when you Kill an Enemy&#10;Gain 10% increased Attack Skill for 20 seconds when you Kill a Rare or Unique Enemy"
+  },
   { "notable": "Heart of Destruction", "id": 57197 },
   { "notable": "Heartstopper", "id": 28884 },
   { "notable": "Hierophant", "id": 42144 },
   { "notable": "Hinekora, Death's Fury", "id": 1731 },
   { "notable": "Illuminated Devotion", "id": 60462 },
-  { "notable": "Impact", "id": 38180 },
+  {
+    "notable": "Impact",
+    "id": 38180,
+    "effect": "5% increased Area of Effect per Enemy killed recently, up to 50%&#10;+0.4 metres to Melee Strike Range&#10;50% increased Accuracy Rating&#10;Deal up to 15% more Melee Damage to Enemies, based on proximity"
+  },
   { "notable": "Indomitable Resolve", "id": 52435 },
   { "notable": "Inevitable Judgement", "id": 48214 },
   { "notable": "Infused Toxins", "id": 21192 },
@@ -163,7 +179,11 @@
     "id": 13374,
     "effect": "Impales you inflict last 1 additional Hit&#10;If you've Impaled an Enemy Recently, you and nearby Allies have +1000 to Armour&#10;You and nearby Allies deal 6 to 12 added Physical Damage for each Impale on Enemy"
   },
-  { "notable": "Masterful Form", "id": 16306 },
+  {
+    "notable": "Masterful Form",
+    "id": 16306,
+    "effect": "Your Maximum Endurance Charges is equal to your Maximum Frenzy Charges&#10;+1 to Maximum Frenzy Charges"
+  },
   { "notable": "Mastermind of Discord", "id": 61259 },
   {
     "notable": "Measured Retaliation",
@@ -193,7 +213,11 @@
   { "notable": "Occupying Force", "id": 2872 },
   { "notable": "One Step Ahead", "id": 23225 },
   { "notable": "Opportunistic", "id": 19083 },
-  { "notable": "Overwhelm", "id": 17315 },
+  {
+    "notable": "Overwhelm",
+    "id": 17315,
+    "effect": "Base Critical Strike Chance for Attacks with Weapons is 8%&#10;+10% to Critical Strike Multiplier per Nearby Enemy, up to +100%"
+  },
   { "notable": "Pathfinder", "id": 9327 },
   { "notable": "Perfect Crime", "id": 28535 },
   { "notable": "Pious Path", "id": 32816 },
