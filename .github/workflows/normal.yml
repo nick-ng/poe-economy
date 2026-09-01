@@ -1,4 +1,4 @@
-name: Publish wiki (regular)
+name: Publish wiki (normal)
 
 on:
   schedule:
