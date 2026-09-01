@@ -14,6 +14,8 @@ node ./js/forbidden-jewels.mjs
 
 cd wiki-temp
 
+echo $date > Home.md
+
 ls
 
 git config user.email nick-ng@users.noreply.github.com
