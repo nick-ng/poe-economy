@@ -21,7 +21,7 @@ ls
 git config user.email nick-ng@users.noreply.github.com
 git config user.name "${GITHUB_ACTOR}"
 
-git add -A
+git add .
 
 git commit -m "chore: auto update - $(date)"
 
