@@ -612,7 +612,7 @@ const main = async () => {
     );
     lines.push(`Average | ${labEv.toFixed(1)}c | -`);
 
-    await writeFile(join("wiki-temp", "LAB_GEMS.md"), lines.join("\n"));
+    await writeFile(join("wiki-temp", "merclab.md"), lines.join("\n"));
   } catch (e) {
     console.error("Error getting lab gems", e);
   }

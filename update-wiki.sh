@@ -6,11 +6,15 @@ cd "$(dirname $0)"
 
 git clone --quiet "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" wiki-temp
 
+ls wiki-temp
+
 node ./js/lab-gems.mjs
 node ./js/beasts.mjs
 node ./js/forbidden-jewels.mjs
 
 cd wiki-temp
+
+ls
 
 git config user.email nick-ng@users.noreply.github.com
 git config user.name "${GITHUB_ACTOR}"
