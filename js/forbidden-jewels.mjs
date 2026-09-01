@@ -186,7 +186,7 @@ const main = async () => {
   lines.push("");
 
   await writeFile(
-    join("wiki-temp", "Forbidden_Jewels.md"),
+    join("wiki-temp", "Forbidden Jewels.md"),
     lines.join("\n"),
   );
 };
