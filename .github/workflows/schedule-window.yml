@@ -22,7 +22,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -euo pipefail
           today=$(date -u +%F)
 
           # ISO-8601 dates compare correctly as plain strings, so no date maths
