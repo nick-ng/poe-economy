@@ -2,7 +2,7 @@ name: Schedule window
 
 on:
   schedule:
-    - cron: "5 10 * * *"
+    - cron: "5 22 * * *" # 10 PM UTC
   workflow_dispatch:
 
 permissions:
