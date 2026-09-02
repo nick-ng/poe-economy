@@ -78,10 +78,18 @@
   { "notable": "Commander of Darkness", "id": 36017 },
   { "notable": "Conviction of Power", "id": 25651 },
   { "notable": "Corpse Pact", "id": 23572 },
-  { "notable": "Crave the Slaughter", "id": 24528 },
+  {
+    "notable": "Crave the Slaughter",
+    "id": 24528,
+    "effect": "Inherent Rage Loss starts 2 seconds later&#10;Every Rage also grants 1% increased Attack Speed"
+  },
   { "notable": "Deadeye", "id": 34567 },
   { "notable": "Deathmarked", "id": 48239 },
-  { "notable": "Defy Pain", "id": 9271 },
+  {
+    "notable": "Defy Pain",
+    "id": 9271,
+    "effect": "Gain Defiance for 10 seconds on losing Life to an Enemy Hit, no more than once every 0.3 seconds&#10;Gain 3% of Missing Unreserved Life before being Hit by an Enemy Per Defiance&#10;Lose all Defiance when you reach 10 Defiance"
+  },
   { "notable": "Demolitions Specialist", "id": 39834 },
   {
     "notable": "Determined Survivor",
@@ -123,7 +131,11 @@
   { "notable": "Fury of Nature", "id": 18054 },
   { "notable": "Gathering Winds", "id": 24848 },
   { "notable": "Gladiator", "id": 34774 },
-  { "notable": "Gore Dancer", "id": 29630 },
+  {
+    "notable": "Gore Dancer",
+    "id": 29630,
+    "effect": "30% of Life Leech is Instant"
+  },
   {
     "notable": "Gratuitous Violence",
     "id": 27864,
@@ -140,14 +152,22 @@
   { "notable": "Heart of Destruction", "id": 57197 },
   { "notable": "Heartstopper", "id": 28884 },
   { "notable": "Hierophant", "id": 42144 },
-  { "notable": "Hinekora, Death's Fury", "id": 1731 },
+  {
+    "notable": "Hinekora, Death's Fury",
+    "id": 1731,
+    "effect": "Enemies you or your Totems Kill have 10% chance to Explode, dealing 250% of their maximum Life as Fire Damage"
+  },
   { "notable": "Illuminated Devotion", "id": 60462 },
   {
     "notable": "Impact",
     "id": 38180,
     "effect": "5% increased Area of Effect per Enemy killed recently, up to 50%&#10;+0.4 metres to Melee Strike Range&#10;50% increased Accuracy Rating&#10;Deal up to 15% more Melee Damage to Enemies, based on proximity"
   },
-  { "notable": "Indomitable Resolve", "id": 52435 },
+  {
+    "notable": "Indomitable Resolve",
+    "id": 52435,
+    "effect": "Take 25% less Damage&#10;Deal 10% less Damage"
+  },
   { "notable": "Inevitable Judgement", "id": 48214 },
   { "notable": "Infused Toxins", "id": 21192 },
   { "notable": "Inquisitor", "id": 43962 },
@@ -204,7 +224,11 @@
   { "notable": "Nature's Boon", "id": 65296 },
   { "notable": "Nature's Reprisal", "id": 40813 },
   { "notable": "Necromancer", "id": 10099 },
-  { "notable": "Ngamahu, Flame's Advance", "id": 50692 },
+  {
+    "notable": "Ngamahu, Flame's Advance",
+    "id": 50692,
+    "effect": "Non-Unique Jewels cause Increases and Reductions to other Damage Types in a Large Radius to be Transformed to apply to Fire Damage&#10;Non-Unique Jewels cause Small and Notable Passive Skills in a Large Radius to also grant +4 to Strength"
+  },
   { "notable": "Nine Lives", "id": 27602 },
   { "notable": "Oath of Spring", "id": 31364 },
   { "notable": "Oath of Summer", "id": 33645 },
@@ -228,10 +252,18 @@
   { "notable": "Pyromaniac", "id": 16940 },
   { "notable": "Radiant Crusade", "id": 4494 },
   { "notable": "Radiant Faith", "id": 42264 },
-  { "notable": "Ramako, Sun's Light", "id": 61355 },
+  {
+    "notable": "Ramako, Sun's Light",
+    "id": 61355,
+    "effect": "Nearby Enemy Monsters' Fire Resistance against&#10;Damage over Time is -20% while you are Stationary"
+  },
   { "notable": "Ricochet", "id": 61627 },
   { "notable": "Righteous Providence", "id": 53884 },
-  { "notable": "Rite of Ruin", "id": 57560 },
+  {
+    "notable": "Rite of Ruin",
+    "id": 57560,
+    "effect": "50% increased Rage Effect&#10;Lose 0.1% of Life per second per Rage while you are not losing Rage"
+  },
   { "notable": "Ritual of Awakening", "id": 34434 },
   { "notable": "Saboteur", "id": 58827 },
   { "notable": "Sanctuary", "id": 39790 },
@@ -244,17 +276,29 @@
   { "notable": "Shaper of Winter", "id": 40810 },
   { "notable": "Shrapnel Specialist", "id": 57175 },
   { "notable": "Sign of Purpose", "id": 51492 },
-  { "notable": "Sione, Sun's Roar", "id": 31667 },
+  {
+    "notable": "Sione, Sun's Roar",
+    "id": 31667,
+    "effect": "Warcries have infinite Power&#10;30% increased Warcry Buff Effect"
+  },
   { "notable": "Slayer", "id": 43195 },
   { "notable": "Soul Drinker", "id": 48999 },
   { "notable": "Spellbreaker", "id": 41891 },
   { "notable": "Swift Killer", "id": 32947 },
-  { "notable": "Tasalio, Cleansing Water", "id": 48480 },
+  {
+    "notable": "Tasalio, Cleansing Water",
+    "id": 48480,
+    "effect": "Modifiers to Fire Resistance also apply to Cold and Lightning Resistances at 50% of their Value&#10;Unaffected by Ignite"
+  },
   { "notable": "Tawhoa, Forest's Strength", "id": 5029 },
   { "notable": "Time of Need", "id": 55146 },
   { "notable": "Toxic Delivery", "id": 19598 },
   { "notable": "Trickster", "id": 6778 },
-  { "notable": "Tukohama, War's Herald", "id": 53095 },
+  {
+    "notable": "Tukohama, War's Herald",
+    "id": 53095,
+    "effect": "Skills from Equipped Body Armour are Supported by Level 30 Ancestral Call&#10;Skills from Equipped Body Armour are Supported by Level 20 Fist of War"
+  },
   {
     "notable": "Unbreakable",
     "id": 53816,
@@ -302,10 +346,18 @@
     "id": 62595,
     "effect": "8% increased Damage per Endurance Charge&#10;25% chance to gain an Endurance Chage when you Stun an Enemy&#10;10% increased Stun Duration on Enemies per Endurance Chage&#10;6% increased Area of Effect per Endurance Charge"
   },
-  { "notable": "Valako, Storm's Embrace", "id": 32249 },
+  {
+    "notable": "Valako, Storm's Embrace",
+    "id": 32249,
+    "effect": "Modifiers to Maximum Fire Resistance also apply to Maximum Cold and Lightning Resistances"
+  },
   { "notable": "Vile Bastion", "id": 37492 },
   { "notable": "Void Beacon", "id": 27096 },
-  { "notable": "War Bringer", "id": 32251 },
+  {
+    "notable": "War Bringer",
+    "id": 32251,
+    "effect": "Warcries Exert twice as many Attacks"
+  },
   {
     "notable": "War of Attrition",
     "id": 758,
