@@ -82,7 +82,6 @@ export async function fetchPoeNinjaItems(leagueName, type) {
 
     return resJson;
   } catch (e) {
-    console.log("url", url);
     console.error("response", resText);
     console.error("error parsing response", e);
   }

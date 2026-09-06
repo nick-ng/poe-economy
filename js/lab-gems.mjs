@@ -1,8 +1,8 @@
 import { writeFile } from "node:fs/promises";
-import { createInterface as readlineCreateInterface } from "node:readline/promises";
 import { join } from "path";
 
 import { fetchPoeNinjaItems, getLeague } from "./poe-ninja.mjs";
+import { nC2 } from "./maths.mjs";
 
 const POE_NINJA_URL = "https://poe.ninja";
 const SKILL_GEMS = [
@@ -306,6 +306,20 @@ const COLOUR_EMOJIS = {
 
 const lines = [];
 
+const calculateRandomSameColourEv = (poeNinjaData) => {
+  poeNinjaData.sort((a, b) => b.chaosValue - a.chaosValue);
+
+  let total = 0;
+  let totalCases = 0;
+  for (let i = 0; i < poeNinjaData.length; i++) {
+    const cases = nC2(poeNinjaData.length - i - 1);
+    totalCases = totalCases + cases;
+    total = total + poeNinjaData[i].chaosValue * cases;
+  }
+
+  return total / totalCases;
+};
+
 const getGems = async (leagueName) => {
   const resJson = await fetchPoeNinjaItems(leagueName, "SkillGem");
 
@@ -332,6 +346,7 @@ const main = async () => {
         gem.gemQuality >= 20 ||
         gemName.includes("support") ||
         gemName.includes("trarthus") ||
+        gemName === "Chain Hook of Angling" ||
         gemName.includes("vaal")
       ) {
         return false;
@@ -424,13 +439,15 @@ const main = async () => {
         }
       }
 
-      const ev = total / sameColourPrices[colour].length;
+      const ev = calculateRandomSameColourEv(sameColourPrices[colour]);
+      const oldEv = total / sameColourPrices[colour].length;
       const top3Value = totalTop3 / 3;
       const top3Chance = 3 / sameColourPrices[colour].length;
       const top3EV = totalTop3 / sameColourPrices[colour].length;
       if (sameColourPrices[colour].length > 0) {
         randomSameColour.push({
           colour,
+          oldEv,
           ev,
           top5: sameColourPrices[colour].sort((a, b) =>
             b.chaosValue - a.chaosValue
@@ -604,7 +621,7 @@ const main = async () => {
       }c | 6.0%`,
     );
     lines.push(
-      `Exchange a Support Gem for a random Exceptional Gem | ${
+      `Exchange a Support Gem for an Empower, Enlightned, or Enhance | ${
         exceptionalEv.toFixed(
           1,
         )
