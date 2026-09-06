@@ -2,7 +2,7 @@ name: Schedule window
 
 on:
   schedule:
-    - cron: "5 22 * * *" # 10 PM UTC
+    - cron: "5 6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -35,5 +35,5 @@ jobs:
 
           echo "$today -> enable $enabled, disable $disabled"
           # Disable first so a slow pair of API calls never leaves both schedules live
-          gh workflow disable "$disabled" -R "$GITHUB_REPOSITORY"
-          gh workflow enable  "$enabled"  -R "$GITHUB_REPOSITORY"
+          gh workflow disable "$disabled" -R "$GITHUB_REPOSITORY" || true
+          gh workflow enable  "$enabled"  -R "$GITHUB_REPOSITORY" || true
