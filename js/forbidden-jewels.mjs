@@ -149,22 +149,20 @@ const main = async () => {
               fleshChaosValue: flesh.chaosValue,
               fleshDivineValue: flesh.divineValue,
               fleshPriceString: flesh.divineValue >= DIVINE_THRESHOLD
-                ? `**${flesh.divineValue.toFixed(1)} d**`
-                : `${flesh.chaosValue.toFixed(1)} c`,
+                ? `**${flesh.divineValue.toFixed(1)}d**`
+                : `${flesh.chaosValue.toFixed(1)}c`,
               fleshUrl: flesh.tradeUrl,
               flameChaosValue: flame.chaosValue,
               flameDivineValue: flame.divineValue,
               flamePriceString: flame.divineValue >= DIVINE_THRESHOLD
-                ? `**${flame.divineValue.toFixed(1)} d**`
-                : `${flame.chaosValue.toFixed(1)} c`,
+                ? `**${flame.divineValue.toFixed(1)}d**`
+                : `${flame.chaosValue.toFixed(1)}c`,
               flameUrl: flame.tradeUrl,
               effect: flesh.effect,
               totalPriceString:
                 (flesh.divineValue + flame.divineValue) >= DIVINE_THRESHOLD
-                  ? `**${
-                    (flesh.divineValue + flame.divineValue).toFixed(1)
-                  } d**`
-                  : `${(flesh.chaosValue + flame.chaosValue).toFixed(1)} c`,
+                  ? `**${(flesh.divineValue + flame.divineValue).toFixed(1)}d**`
+                  : `${(flesh.chaosValue + flame.chaosValue).toFixed(1)}c`,
               poeNinjaUrl: jewelPoeNinjaUrl,
             };
           }).sort((a, b) =>
