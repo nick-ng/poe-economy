@@ -128,6 +128,9 @@ const main = async () => {
             }`;
 
             if (!flesh || !flame) {
+              console.warn(`couldn't get both jewels of ${n}`);
+              console.info("Flame:", flame);
+              console.info("Flesh:", flesh);
               return {
                 notable: n,
                 fleshChaosValue: -1,
@@ -138,7 +141,7 @@ const main = async () => {
                 flameDivineValue: -1,
                 flamePriceString: "???",
                 flameUrl: jewelPoeNinjaUrl,
-                effect: flesh.effect,
+                effect: flame?.effect || flesh?.effect || "",
                 totalPriceString: "???",
                 poeNinjaUrl: jewelPoeNinjaUrl,
               };

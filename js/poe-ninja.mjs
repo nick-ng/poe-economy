@@ -4,21 +4,37 @@ import { join } from "path";
 
 const POE_NINJA_URL = "https://poe.ninja";
 const CACHE_DIR = join("js", "temp");
+const CACHE_MAX_AGE_MS = 1000 * 60 * 5; // 5 minutes
+
+const cache = {};
+const LEAGUE_KEY = "poe1-league-name";
 
 /**
  * Gets the current standard challenge league
  */
 export async function getLeague() {
   const url = [POE_NINJA_URL, "poe1", "api", "data", "index-state"].join("/");
-  const res = await fetch(url);
-  let resText = await res.text();
   let resJson = {};
-  try {
-    resJson = JSON.parse(resText);
-  } catch (e) {
-    console.error(resText);
-    console.error("error parsing response", err);
+  if (cache[LEAGUE_KEY]) {
+    resJson = cache[LEAGUE_KEY];
+  } else {
+    const fileCache = await loadJson(LEAGUE_KEY);
+    if (fileCache && fileCache.fetchedAt < (Date.now() + CACHE_MAX_AGE_MS)) {
+      resJson = fileCache;
+    } else {
+      const res = await fetch(url);
+      let resText = await res.text();
+      try {
+        resJson = JSON.parse(resText);
+        await saveJson(LEAGUE_KEY, resJson);
+      } catch (e) {
+        console.error(resText);
+        console.error("error parsing response", err);
+      }
+    }
   }
+
+  cache[LEAGUE_KEY] = resJson;
   const temp = resJson.economyLeagues.filter((l) => {
     const leagueName = l.name.toLowerCase();
     if (leagueName === "standard") {
@@ -76,18 +92,59 @@ export async function fetchPoeNinjaItems(leagueName, type) {
     `overview?league=${leagueName}&type=${type}`,
   ].join("/");
 
-  const res = await fetch(url);
-  const resText = await res.text();
-  let resJson = {};
+  const cacheKey = `${leagueName}-${type}`;
+  if (cache[cacheKey]) {
+    return cache[cacheKey];
+  } else {
+    const fileCache = await loadJson(cacheKey);
+    if (fileCache && fileCache.fetchedAt < (Date.now() + CACHE_MAX_AGE_MS)) {
+      cache[cacheKey] = fileCache;
+      return fileCache;
+    }
+    const res = await fetch(url);
+    const resText = await res.text();
 
-  try {
-    resJson = JSON.parse(resText);
+    try {
+      const resJson = JSON.parse(resText);
+      await saveJson(cacheKey, resJson);
+      cache[cacheKey] = resJson;
 
-    return resJson;
-  } catch (e) {
-    console.error("response", resText);
-    console.error("error parsing response", e);
+      return resJson;
+    } catch (e) {
+      console.error("response", resText);
+      console.error("error parsing response", e);
+    }
   }
 
   return false;
+}
+
+async function loadJson(filename) {
+  try {
+    const temp = await readFile(join(CACHE_DIR, `${filename}.json`), {
+      encoding: "utf8",
+    });
+    if (temp.length > 0) {
+      return JSON.parse(temp);
+    }
+  } catch (e) {
+    if (e.code !== "ENOENT") {
+      console.error("error reading beast info", e);
+
+      throw e;
+    }
+
+    return {};
+  }
+}
+
+/**
+ * @param {string} filename
+ * @param {Object} body object to be serialsed and saved to disk
+ */
+function saveJson(filename, body) {
+  return writeFile(
+    join(CACHE_DIR, `${filename}.json`),
+    JSON.stringify({ ...body, fetchedAt: Date.now() }),
+  );
 }
