@@ -170,48 +170,75 @@ const main = async () => {
   const expensiveBeasts = redBeastPrices.filter((r) =>
     r.chaosValue >= redBeastThresholdUpper
   );
-  const expensiveHighPrice = expensiveBeasts[0].chaosValue;
-  const expensiveLowPrice =
-    expensiveBeasts[expensiveBeasts.length - 1].chaosValue;
-  const expensivePriceString = expensiveHighPrice === expensiveLowPrice
-    ? `${expensiveHighPrice}c`
-    : `${expensiveLowPrice}c - ${expensiveHighPrice}c`;
+  if (expensiveBeasts.length > 0) {
+    const expensiveHighPrice = expensiveBeasts[0].chaosValue;
+    const expensiveLowPrice =
+      expensiveBeasts[expensiveBeasts.length - 1].chaosValue;
+    const expensivePriceString = expensiveHighPrice === expensiveLowPrice
+      ? `${expensiveHighPrice}c`
+      : `${expensiveLowPrice}c - ${expensiveHighPrice}c`;
 
-  lines.push(...getBeastSubsections(
-    expensiveBeasts,
-    redBeasts,
-    `\n## Keep (${expensivePriceString})`,
-  ));
+    lines.push(...getBeastSubsections(
+      expensiveBeasts,
+      redBeasts,
+      `\n## Keep (${expensivePriceString})`,
+    ));
+  } else {
+    lines.push(
+      "\n## Keep",
+      "",
+      "There are no worthy beasts",
+      "",
+    );
+  }
 
   const borderlineBeasts = redBeastPrices.filter((r) =>
     r.chaosValue < redBeastThresholdUpper &&
     r.chaosValue >= redBeastThresholdLower
   );
-  const borderLineHighPrice = borderlineBeasts[0].chaosValue;
-  const borderLineLowPrice =
-    borderlineBeasts[borderlineBeasts.length - 1].chaosValue;
-  const borderLinePriceString = borderLineHighPrice === borderLineLowPrice
-    ? `${borderLineHighPrice}c`
-    : `${borderLineLowPrice}c - ${borderLineHighPrice}c`;
-  lines.push(...getBeastSubsections(
-    borderlineBeasts,
-    redBeasts,
-    `\n## Borderline (${borderLinePriceString})`,
-  ));
+  if (borderlineBeasts.length > 0) {
+    const borderLineHighPrice = borderlineBeasts[0].chaosValue;
+    const borderLineLowPrice =
+      borderlineBeasts[borderlineBeasts.length - 1].chaosValue;
+    const borderLinePriceString = borderLineHighPrice === borderLineLowPrice
+      ? `${borderLineHighPrice}c`
+      : `${borderLineLowPrice}c - ${borderLineHighPrice}c`;
+    lines.push(...getBeastSubsections(
+      borderlineBeasts,
+      redBeasts,
+      `\n## Borderline (${borderLinePriceString})`,
+    ));
+  } else {
+    lines.push(
+      "\n## Borderline",
+      "",
+      "There are no worthy beasts",
+      "",
+    );
+  }
 
   const cheapBeasts = redBeastPrices.filter((r) =>
     r.chaosValue < redBeastThresholdLower
   );
-  const cheapHighPrice = cheapBeasts[0].chaosValue;
-  const cheapLowPrice = cheapBeasts[cheapBeasts.length - 1].chaosValue;
-  const cheapPriceString = cheapHighPrice === cheapLowPrice
-    ? `${cheapHighPrice}c`
-    : `${cheapLowPrice}c - ${cheapHighPrice}c`;
-  lines.push(...getBeastSubsections(
-    cheapBeasts,
-    redBeasts,
-    `\n## Trash (${cheapPriceString})`,
-  ));
+  if (cheapBeasts.length > 0) {
+    const cheapHighPrice = cheapBeasts[0].chaosValue;
+    const cheapLowPrice = cheapBeasts[cheapBeasts.length - 1].chaosValue;
+    const cheapPriceString = cheapHighPrice === cheapLowPrice
+      ? `${cheapHighPrice}c`
+      : `${cheapLowPrice}c - ${cheapHighPrice}c`;
+    lines.push(...getBeastSubsections(
+      cheapBeasts,
+      redBeasts,
+      `\n## Trash (${cheapPriceString})`,
+    ));
+  } else {
+    lines.push(
+      "\n## Trash",
+      "",
+      "There are no worthy beasts",
+      "",
+    );
+  }
 
   await writeFile(join("wiki-temp", "Beasts.md"), lines.join("\n"));
 };
