@@ -6,6 +6,8 @@ cd "$(dirname $0)"
 
 git clone --quiet "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" wiki-temp
 
+mkdir -p ./js/temp
+
 node ./js/lab-gems.mjs
 node ./js/beasts.mjs
 node ./js/forbidden-jewels.mjs

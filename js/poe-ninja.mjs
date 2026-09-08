@@ -1,6 +1,9 @@
 import assert from "node:assert";
+import { readFile, writeFile } from "node:fs/promises";
+import { join } from "path";
 
 const POE_NINJA_URL = "https://poe.ninja";
+const CACHE_DIR = join("js", "temp");
 
 /**
  * Gets the current standard challenge league
