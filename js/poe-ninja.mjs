@@ -77,19 +77,28 @@ export async function getLeague() {
   return temp[0];
 }
 
+function getMarketUrlParts(market) {
+  switch (market) {
+    case "exchange": {
+      return ["exchange", "current"];
+    }
+    default: {
+      return ["stash", "current", "item"];
+    }
+  }
+}
+
 /**
  * @param {string} leagueName
  * @param {string} type e.g. "SkillGem", "Beast"
  */
-export async function fetchPoeNinjaItems(leagueName, type) {
-  const url = [
+export async function fetchPoeNinjaItems(leagueName, type, market = "stash") {
+  let url = [
     POE_NINJA_URL,
     "poe1",
     "api",
     "economy",
-    "stash",
-    "current",
-    "item",
+    ...getMarketUrlParts(market),
     `overview?league=${leagueName}&type=${type}`,
   ].join("/");
 
