@@ -19,14 +19,16 @@ export async function getLeague() {
     resJson = cache[LEAGUE_KEY];
   } else {
     const fileCache = await loadJson(LEAGUE_KEY);
-    if (fileCache && fileCache.fetchedAt < (Date.now() + CACHE_MAX_AGE_MS)) {
-      resJson = fileCache;
+    if (fileCache && (fileCache.fetchedAt + CACHE_MAX_AGE_MS) > (Date.now())) {
+      resJson = fileCache.body;
+      cache[LEAGUE_KEY] = resJson;
     } else {
       const res = await fetch(url);
       let resText = await res.text();
       try {
         resJson = JSON.parse(resText);
-        await saveJson(LEAGUE_KEY, resJson);
+        cache[LEAGUE_KEY] = resJson;
+        await saveJson(LEAGUE_KEY, resJson, url);
       } catch (e) {
         console.error(resText);
         console.error("error parsing response", err);
@@ -34,7 +36,6 @@ export async function getLeague() {
     }
   }
 
-  cache[LEAGUE_KEY] = resJson;
   const temp = resJson.economyLeagues.filter((l) => {
     const leagueName = l.name.toLowerCase();
     if (leagueName === "standard") {
@@ -97,16 +98,16 @@ export async function fetchPoeNinjaItems(leagueName, type) {
     return cache[cacheKey];
   } else {
     const fileCache = await loadJson(cacheKey);
-    if (fileCache && fileCache.fetchedAt < (Date.now() + CACHE_MAX_AGE_MS)) {
-      cache[cacheKey] = fileCache;
-      return fileCache;
+    if (fileCache && (fileCache.fetchedAt + CACHE_MAX_AGE_MS) > (Date.now())) {
+      cache[cacheKey] = fileCache.body;
+      return fileCache.body;
     }
     const res = await fetch(url);
     const resText = await res.text();
 
     try {
       const resJson = JSON.parse(resText);
-      await saveJson(cacheKey, resJson);
+      await saveJson(cacheKey, resJson, url);
       cache[cacheKey] = resJson;
 
       return resJson;
@@ -142,9 +143,9 @@ async function loadJson(filename) {
  * @param {string} filename
  * @param {Object} body object to be serialsed and saved to disk
  */
-function saveJson(filename, body) {
+function saveJson(filename, body, url = "") {
   return writeFile(
     join(CACHE_DIR, `${filename}.json`),
-    JSON.stringify({ ...body, fetchedAt: Date.now() }),
+    JSON.stringify({ body, fetchedAt: Date.now(), url }),
   );
 }
