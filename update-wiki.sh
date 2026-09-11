@@ -11,6 +11,7 @@ mkdir -p ./js/temp
 node ./js/lab-gems.mjs
 node ./js/beasts.mjs
 node ./js/forbidden-jewels.mjs
+node ./js/delve.mjs
 
 cd wiki-temp
 
