@@ -101,9 +101,68 @@ const resonators = [
   },
 ];
 
+const bosses = [
+  {
+    boss: "Ahuatotli, the Blind",
+    node: "The Grand Architect's Temple",
+    image: "50px-The_Grand_Architect's_Temple_delve_node_icon.png",
+    drops: [
+      { item: "Cerberus Limb", chance: 0.6, type: "", market: "" },
+      { item: "Doryani's Machinarium", chance: 0.16, type: "", market: "" },
+      { item: "Ahkeli's Mountain", chance: 0.08, type: "", market: "" },
+      { item: "Uzaza's Medow", chance: 0.08, type: "", market: "" },
+      { item: "Putembo's Valley", chance: 0.08, type: "", market: "" },
+      { item: "Curiosity", chance: 0.4, type: "", market: "" },
+    ],
+  },
+  {
+    boss: "Kurgal, the Blackblooded",
+    node: "The Lich's Tomb",
+    image: "50px-The_Lich's_Tomb_delve_node_icon.png",
+    drops: [
+      {
+        item: "Hale Negator",
+        chance: 0.5,
+        type: "",
+        market: "",
+        notes: "1 socket 40%, 2 socket 10%",
+      },
+      {
+        item: "Command of the Pit",
+        chance: 0.2,
+        type: "",
+        market: "",
+        notes: "1 socket 15%, 2 socket 5%",
+      },
+      { item: "Ahkeli's Valley", chance: 0.1, type: "", market: "" },
+      { item: "Uzaza's Mountain", chance: 0.1, type: "", market: "" },
+      { item: "Putembo's Meadow", chance: 0.1, type: "", market: "" },
+      { item: "Misery in Darkness", chance: 0.2, type: "", market: "" },
+      {
+        item: "Zorath's Eye of the Inevitable",
+        chance: 0.5,
+        type: "",
+        market: "",
+      },
+    ],
+  },
+  {
+    boss: "Aul, the Crystal King",
+    node: "The Crystal King's Throne",
+    image: "50px-The_Crystal_King's_Throne_delve_node_icon.png",
+    drops: [
+      { item: "Aul's Uprising", chance: 0.61, type: "", market: "" },
+      { item: "Crown of the Tyrant", chance: 0.15, type: "", market: "" },
+      { item: "Ahkeli's Meadow", chance: 0.08, type: "", market: "" },
+      { item: "Uzaza's Valley", chance: 0.08, type: "", market: "" },
+      { item: "Putembo's Mountain", chance: 0.08, type: "", market: "" },
+      { item: "Luminous Trove", chance: 0.16, type: "", market: "" },
+    ],
+  },
+];
+
 const main = async () => {
   const league = await getLeague();
-  console.log("league.name", league.name);
 
   const fossilJson = await fetchPoeNinjaItems(
     league.name,
