@@ -77,28 +77,33 @@ export async function getLeague() {
   return temp[0];
 }
 
-function getMarketUrlParts(market) {
-  switch (market) {
-    case "exchange": {
-      return ["exchange", "current"];
-    }
-    default: {
-      return ["stash", "current", "item"];
-    }
+function getMarketType(type) {
+  if (["DivinationCard", "Fossil", "Fragment", "Resonator"].includes(type)) {
+    return "exchange";
   }
+
+  return "stash";
+}
+
+function getMarketUrlParts(type) {
+  if (getMarketType(type) === "exchange") {
+    return ["exchange", "current"];
+  }
+
+  return ["stash", "current", "item"];
 }
 
 /**
  * @param {string} leagueName
  * @param {string} type e.g. "SkillGem", "Beast"
  */
-export async function fetchPoeNinjaItems(leagueName, type, market = "stash") {
+export async function fetchPoeNinjaItems(leagueName, type) {
   let url = [
     POE_NINJA_URL,
     "poe1",
     "api",
     "economy",
-    ...getMarketUrlParts(market),
+    ...getMarketUrlParts(type),
     `overview?league=${leagueName}&type=${type}`,
   ].join("/");
 
@@ -146,6 +151,20 @@ async function loadJson(filename) {
 
     return {};
   }
+}
+
+export async function getPoeNinjaItemFetcherByName(leagueName, type) {
+  const items = await fetchPoeNinjaItems(leagueName, type);
+
+  if (getMarketType(type) === "exchange") {
+    return (itemName) => {
+      return items.find((item) => item.name === itemName);
+    };
+  }
+
+  return (itemName) => {
+    return items.find((item) => item.name === itemName);
+  };
 }
 
 /**

@@ -107,12 +107,32 @@ const bosses = [
     node: "The Grand Architect's Temple",
     image: "50px-The_Grand_Architect's_Temple_delve_node_icon.png",
     drops: [
-      { item: "Cerberus Limb", chance: 0.6, type: "", market: "" },
-      { item: "Doryani's Machinarium", chance: 0.16, type: "", market: "" },
-      { item: "Ahkeli's Mountain", chance: 0.08, type: "", market: "" },
-      { item: "Uzaza's Medow", chance: 0.08, type: "", market: "" },
-      { item: "Putembo's Valley", chance: 0.08, type: "", market: "" },
-      { item: "Curiosity", chance: 0.4, type: "", market: "" },
+      {
+        item: "Cerberus Limb",
+        chance: 0.6,
+        type: "UniqueWeapon",
+      },
+      {
+        item: "Doryani's Machinarium",
+        chance: 0.16,
+        type: "UniqueMap",
+      },
+      {
+        item: "Ahkeli's Mountain",
+        chance: 0.08,
+        type: "UniqueAccessory",
+      },
+      {
+        item: "Uzaza's Medow",
+        chance: 0.08,
+        type: "UniqueAccessory",
+      },
+      {
+        item: "Putembo's Valley",
+        chance: 0.08,
+        type: "UniqueAccessory",
+      },
+      { item: "Curiosity", chance: 0.4, type: "UniqueJewel" },
     ],
   },
   {
@@ -123,26 +143,35 @@ const bosses = [
       {
         item: "Hale Negator",
         chance: 0.5,
-        type: "",
-        market: "",
+        type: "UniqueArmour",
         notes: "1 socket 40%, 2 socket 10%",
       },
       {
         item: "Command of the Pit",
         chance: 0.2,
-        type: "",
-        market: "",
+        type: "UniqueArmour",
         notes: "1 socket 15%, 2 socket 5%",
       },
-      { item: "Ahkeli's Valley", chance: 0.1, type: "", market: "" },
-      { item: "Uzaza's Mountain", chance: 0.1, type: "", market: "" },
-      { item: "Putembo's Meadow", chance: 0.1, type: "", market: "" },
-      { item: "Misery in Darkness", chance: 0.2, type: "", market: "" },
+      {
+        item: "Ahkeli's Valley",
+        chance: 0.1,
+        type: "UniqueAccessory",
+      },
+      {
+        item: "Uzaza's Mountain",
+        chance: 0.1,
+        type: "UniqueAccessory",
+      },
+      {
+        item: "Putembo's Meadow",
+        chance: 0.1,
+        type: "UniqueAccessory",
+      },
+      { item: "Misery in Darkness", chance: 0.2, type: "DivinationCard" },
       {
         item: "Zorath's Eye of the Inevitable",
         chance: 0.5,
-        type: "",
-        market: "",
+        type: "Fragment",
       },
     ],
   },
@@ -151,12 +180,28 @@ const bosses = [
     node: "The Crystal King's Throne",
     image: "50px-The_Crystal_King's_Throne_delve_node_icon.png",
     drops: [
-      { item: "Aul's Uprising", chance: 0.61, type: "", market: "" },
-      { item: "Crown of the Tyrant", chance: 0.15, type: "", market: "" },
-      { item: "Ahkeli's Meadow", chance: 0.08, type: "", market: "" },
-      { item: "Uzaza's Valley", chance: 0.08, type: "", market: "" },
-      { item: "Putembo's Mountain", chance: 0.08, type: "", market: "" },
-      { item: "Luminous Trove", chance: 0.16, type: "", market: "" },
+      { item: "Aul's Uprising", chance: 0.61, type: "UniqueAccessory" },
+      { item: "Crown of the Tyrant", chance: 0.15, type: "UniqueArmour" },
+      {
+        item: "Ahkeli's Meadow",
+        chance: 0.08,
+        type: "UniqueAccessory",
+      },
+      {
+        item: "Uzaza's Valley",
+        chance: 0.08,
+        type: "UniqueAccessory",
+      },
+      {
+        item: "Putembo's Mountain",
+        chance: 0.08,
+        type: "UniqueAccessory",
+      },
+      {
+        item: "Luminous Trove",
+        chance: 0.16,
+        type: "DivinationCard",
+      },
     ],
   },
 ];
@@ -167,7 +212,6 @@ const main = async () => {
   const fossilJson = await fetchPoeNinjaItems(
     league.name,
     "Fossil",
-    "exchange",
   );
   const fossilsPoeNinja = fossilJson.lines.reduce((prev, l) => {
     const item = fossilJson.items.find((i) => i.id === l.id);
@@ -184,7 +228,6 @@ const main = async () => {
   const resonatorJson = await fetchPoeNinjaItems(
     league.name,
     "Resonator",
-    "exchange",
   );
   const resonatorsPoeNinja = resonatorJson.lines.reduce((prev, l) => {
     const item = resonatorJson.items.find((i) => i.id === l.id);
@@ -208,16 +251,16 @@ const main = async () => {
     "",
   );
 
-  const pricedResonators = resonators.map((r) => {
-    const rPoeNinja = resonatorsPoeNinja[r.id];
-    const azuritePerChaos = r.azurite / rPoeNinja.primaryValue;
+  const pricedResonators = resonators.map((resonator) => {
+    const rPoeNinja = resonatorsPoeNinja[resonator.id];
+    const azuritePerChaos = resonator.azurite / rPoeNinja.primaryValue;
     return {
-      ...r,
+      ...resonator,
       chaosValue: rPoeNinja.primaryValue,
       azuritePerChaos,
-      tableLine: `${r.display} | ${rPoeNinja.primaryValue.toFixed(1)}c | ${
-        azuritePerChaos > 0 ? azuritePerChaos.toFixed(1) : "-"
-      }`,
+      tableLine: `${resonator.display} | ${
+        rPoeNinja.primaryValue.toFixed(1)
+      }c | ${azuritePerChaos > 0 ? azuritePerChaos.toFixed(1) : "-"}`,
     };
   }).sort((a, b) => a.azuritePerChaos - b.azuritePerChaos);
 
@@ -226,27 +269,28 @@ const main = async () => {
     "",
     "Resonator | Chaos | Azurite / Chaos",
     ":- | -: | -:",
-    ...pricedResonators.map((r) => r.tableLine),
+    ...pricedResonators.map((resonator) => resonator.tableLine),
     "",
   );
 
-  const pricedBiomes = biomes.map((b) => {
-    const averageFossilValue = b.fossils.reduce((prev, curr) => {
+  const pricedBiomes = biomes.map((biome) => {
+    const averageFossilValue = biome.fossils.reduce((prev, curr) => {
       const fossilP = fossilsPoeNinja[`${curr}-fossil`];
 
-      return prev + fossilP.primaryValue / b.fossils.length;
+      return prev + fossilP.primaryValue / biome.fossils.length;
     }, 0);
 
     const imageUrl =
-      `https://raw.githubusercontent.com/nick-ng/poe-economy/refs/heads/main/images/${b.image}`;
+      `https://raw.githubusercontent.com/nick-ng/poe-economy/refs/heads/main/images/${biome.image}`;
     let tableParts = [
-      `![${b.name}](${imageUrl})`,
+      `![${biome.name}](${imageUrl})`,
       `${averageFossilValue.toFixed(1)}c`,
     ];
-    if (b.specialFossil) {
-      const specialFossil = fossilsPoeNinja[`${b.specialFossil.fossil}-fossil`];
+    if (biome.specialFossil) {
+      const specialFossil =
+        fossilsPoeNinja[`${biome.specialFossil.fossil}-fossil`];
       tableParts.push(
-        b.specialFossil.nodeName,
+        biome.specialFossil.nodeName,
         specialFossil.name,
         `${specialFossil.primaryValue.toFixed(1)}c`,
       );
@@ -254,7 +298,7 @@ const main = async () => {
       tableParts.push("-", "-", "-");
     }
 
-    return { ...b, averageFossilValue, tableLine: tableParts.join(" | ") };
+    return { ...biome, averageFossilValue, tableLine: tableParts.join(" | ") };
   }).sort((a, b) => a.depth - b.depth);
 
   lines.push(
@@ -262,9 +306,12 @@ const main = async () => {
     "",
     "Biome | Average Fossil | Exclusive Node | Exclusive Fossil | Exclusive Price",
     ":- | -: | :- | :- | -:",
-    ...pricedBiomes.map((b) => b.tableLine),
+    ...pricedBiomes.map((biome) => biome.tableLine),
     "",
   );
+
+  const pricedBosses = bosses.map((boss) => {
+  });
 
   lines.push("## Bosses", "", "WIP");
 
