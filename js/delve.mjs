@@ -322,10 +322,12 @@ const main = async () => {
   for (let i = 0; i < bosses.length; i++) {
     const boss = bosses[i];
 
+    const bossImageUrl =
+      `https://raw.githubusercontent.com/nick-ng/poe-economy/refs/heads/main/images/${boss.image}`;
     lines.push(
       `### [${boss.boss}](${boss.wikiUrl})`,
       "",
-      `![${boss.boss}](${boss.image})`,
+      `![${boss.boss}](${bossImageUrl})`,
       "",
     );
 
