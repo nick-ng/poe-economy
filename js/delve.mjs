@@ -290,7 +290,7 @@ const main = async () => {
     const imageUrl =
       `https://raw.githubusercontent.com/nick-ng/poe-economy/refs/heads/main/images/${biome.image}`;
     let tableParts = [
-      `![${biome.name}](${imageUrl})`,
+      `![${biome.name}](${imageUrl} "${biome.name}")`,
       `${averageFossilValue.toFixed(1)}c`,
     ];
     if (biome.specialFossil) {
@@ -325,7 +325,7 @@ const main = async () => {
     const bossImageUrl =
       `https://raw.githubusercontent.com/nick-ng/poe-economy/refs/heads/main/images/${boss.image}`;
     lines.push(
-      `### [${boss.boss}](${boss.wikiUrl})`,
+      `### [${boss.boss}](${boss.wikiUrl} "${boss.boss}")`,
       "",
       `![${boss.boss}](${bossImageUrl})`,
       "",
