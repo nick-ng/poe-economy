@@ -116,6 +116,8 @@ export async function fetchPoeNinjaItems(leagueName, type) {
       cache[cacheKey] = fileCache.body;
       return fileCache.body;
     }
+
+    console.info(`Fetching ${leagueName} ${type}`);
     const res = await fetch(url);
     const resText = await res.text();
 
@@ -154,16 +156,25 @@ async function loadJson(filename) {
 }
 
 export async function getPoeNinjaItemFetcherByName(leagueName, type) {
-  const items = await fetchPoeNinjaItems(leagueName, type);
+  const result = await fetchPoeNinjaItems(leagueName, type);
 
   if (getMarketType(type) === "exchange") {
+    const items = result.items.map((item) => {
+      const line = result.lines.find((l) => l.id === item.id);
+
+      return {
+        ...item,
+        ...line,
+        chaosValue: line.primaryValue,
+      };
+    });
     return (itemName) => {
       return items.find((item) => item.name === itemName);
     };
   }
 
   return (itemName) => {
-    return items.find((item) => item.name === itemName);
+    return result.lines.find((line) => line.name === itemName);
   };
 }
 

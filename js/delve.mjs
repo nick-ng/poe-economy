@@ -1,7 +1,12 @@
 import { writeFile } from "node:fs/promises";
+import assert from "node:assert";
 import { join } from "path";
 
-import { fetchPoeNinjaItems, getLeague } from "./poe-ninja.mjs";
+import {
+  fetchPoeNinjaItems,
+  getLeague,
+  getPoeNinjaItemFetcherByName,
+} from "./poe-ninja.mjs";
 
 const lines = [];
 
@@ -104,6 +109,7 @@ const resonators = [
 const bosses = [
   {
     boss: "Ahuatotli, the Blind",
+    wikiUrl: "https://www.poewiki.net/wiki/Ahuatotli,_the_Blind",
     node: "The Grand Architect's Temple",
     image: "50px-The_Grand_Architect's_Temple_delve_node_icon.png",
     drops: [
@@ -123,7 +129,7 @@ const bosses = [
         type: "UniqueAccessory",
       },
       {
-        item: "Uzaza's Medow",
+        item: "Uzaza's Meadow",
         chance: 0.08,
         type: "UniqueAccessory",
       },
@@ -137,6 +143,7 @@ const bosses = [
   },
   {
     boss: "Kurgal, the Blackblooded",
+    wikiUrl: "https://www.poewiki.net/wiki/Kurgal,_the_Blackblooded",
     node: "The Lich's Tomb",
     image: "50px-The_Lich's_Tomb_delve_node_icon.png",
     drops: [
@@ -177,6 +184,7 @@ const bosses = [
   },
   {
     boss: "Aul, the Crystal King",
+    wikiUrl: "https://www.poewiki.net/wiki/Aul,_the_Crystal_King",
     node: "The Crystal King's Throne",
     image: "50px-The_Crystal_King's_Throne_delve_node_icon.png",
     drops: [
@@ -241,11 +249,10 @@ const main = async () => {
     return prev;
   }, {});
 
-  // console.log("Fossils", fossilsPoeNinja);
-  // console.log("Resonators", resonatorsPoeNinja);
-
   lines.push(
     "# Delve",
+    "",
+    "[poewiki](https://www.poewiki.net/wiki/Delve)",
     "",
     `[${league.name} League](https://poe.ninja/poe1/economy/${league.url}/fossils), fetched at ${new Date()}`,
     "",
@@ -310,10 +317,54 @@ const main = async () => {
     "",
   );
 
-  const pricedBosses = bosses.map((boss) => {
-  });
+  lines.push("## Bosses", "");
 
-  lines.push("## Bosses", "", "WIP");
+  for (let i = 0; i < bosses.length; i++) {
+    const boss = bosses[i];
+
+    lines.push(
+      `### [${boss.boss}](${boss.wikiUrl})`,
+      "",
+      `![${boss.boss}](${boss.image})`,
+      "",
+    );
+
+    let totalExpectedValue = 0;
+    const drops = [];
+    for (let j = 0; j < boss.drops.length; j++) {
+      const drop = boss.drops[j];
+
+      const getItemByName = await getPoeNinjaItemFetcherByName(
+        league.name,
+        drop.type,
+      );
+
+      const item = getItemByName(drop.item);
+      if (!item) {
+        assert(false, `no item: ${JSON.stringify(drop, null, 2)}`);
+      }
+      const expectedValue = item.chaosValue * drop.chance;
+      totalExpectedValue = totalExpectedValue + item.chaosValue * drop.chance;
+      drops.push({
+        chaosValue: item.chaosValue,
+        expectedValue,
+        line: `${drop.item} | ${
+          (drop.chance * 100).toFixed(0)
+        }% | ${item.chaosValue}c`,
+      });
+    }
+
+    drops.sort((a, b) => b.chaosValue - a.chaosValue);
+
+    lines.push(
+      `Expected Value: ${totalExpectedValue.toFixed(1)}c`,
+      "",
+      "Item | Chance | Price",
+      ":- | -: | -:",
+      ...drops.map((d) => d.line),
+      "",
+    );
+  }
 
   await writeFile(join("wiki-temp", "Delve.md"), lines.join("\n"));
 };
