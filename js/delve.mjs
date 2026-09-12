@@ -252,9 +252,9 @@ const main = async () => {
   lines.push(
     "# Delve",
     "",
-    "[poewiki](https://www.poewiki.net/wiki/Delve)",
-    "",
     `[${league.name} League](https://poe.ninja/poe1/economy/${league.url}/fossils), fetched at ${new Date()}`,
+    "",
+    "[poewiki](https://www.poewiki.net/wiki/Delve)",
     "",
   );
 
