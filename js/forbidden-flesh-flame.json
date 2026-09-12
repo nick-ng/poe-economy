@@ -103,12 +103,20 @@
     "id": 34484,
     "effect": "20% of Overkill Damage is Leeched as Life&#10;You are Unaffected by Bleeding while Leeching&#10;Cannot be Stunned while Leeching&#10;20% increased Attack Speed while Leeching"
   },
-  { "notable": "Endless Munitions", "id": 26067 },
+  {
+    "notable": "Endless Munitions",
+    "id": 26067,
+    "effect": "Skills fire 2 additional Projectiles"
+  },
   { "notable": "Enduring Suffusion", "id": 40104 },
   { "notable": "Escape Artist", "id": 29825 },
   { "notable": "Essence Glutton", "id": 3554 },
   { "notable": "Experienced Herbalist", "id": 29662 },
-  { "notable": "Far Shot", "id": 45313 },
+  {
+    "notable": "Far Shot",
+    "id": 45313,
+    "effect": "Projectiles gain Damage as they travel farther, dealing up&#10;to 30% more Damage with Hits and Ailments&#10;Projectile Barrages have no spread"
+  },
   {
     "notable": "Fatal Flourish",
     "id": 42469,
@@ -119,7 +127,11 @@
     "id": 27604,
     "effect": "Your Hits permanently Intimidate Enemies that are on Full Life&#10;Gain Adrenaline for 20 seconds when you reach Low Life&#10;Remove all Ailments and Burning when you gain Adrenaline&#10;Recover 25% of Life when you gain Adrenaline"
   },
-  { "notable": "Focal Point", "id": 5443 },
+  {
+    "notable": "Focal Point",
+    "id": 5443,
+    "effect": "75% increased Effect of your Marks&#10;25% less Damage taken from other Enemies near your Marked Enemy&#10;Your Mark Transfers to another Enemy when Marked Enemy dies"
+  },
   { "notable": "For the Jugular", "id": 18335 },
   { "notable": "Forbidden Power", "id": 62504 },
   {
@@ -128,8 +140,16 @@
     "effect": "You have your maximum Fortification&#10;Nearby Allies count as having Fortification equal to yours"
   },
   { "notable": "Frigid Wake", "id": 47630 },
-  { "notable": "Fury of Nature", "id": 18054 },
-  { "notable": "Gathering Winds", "id": 24848 },
+  {
+    "notable": "Fury of Nature",
+    "id": 18054,
+    "effect": "Non-Damaging Elemental Ailments you inflict spread to other enemies within 2 meters&#10;Non-Damaging Elemental Ailments you inflict have 100% more Effect"
+  },
+  {
+    "notable": "Gathering Winds",
+    "id": 24848,
+    "effect": "Gain 1 Gale Force when you use a Skill&#10;10% increased Effect of Tailwind on you per Gale Force&#10;You and nearby Allies have Tailwind"
+  },
   { "notable": "Gladiator", "id": 34774 },
   {
     "notable": "Gore Dancer",
@@ -234,7 +254,11 @@
   { "notable": "Oath of Summer", "id": 33645 },
   { "notable": "Oath of Winter", "id": 16848 },
   { "notable": "Occultist", "id": 12597 },
-  { "notable": "Occupying Force", "id": 2872 },
+  {
+    "notable": "Occupying Force",
+    "id": 2872,
+    "effect": "Mirage Archers are not attached to you&#10;+2 to maximum number of Summoned Mirage Archers&#10;Cannot Summon Mirage Archers while near your Mirage Archers"
+  },
   { "notable": "One Step Ahead", "id": 23225 },
   { "notable": "Opportunistic", "id": 19083 },
   {
@@ -257,7 +281,11 @@
     "id": 61355,
     "effect": "Nearby Enemy Monsters' Fire Resistance against&#10;Damage over Time is -20% while you are Stationary"
   },
-  { "notable": "Ricochet", "id": 61627 },
+  {
+    "notable": "Ricochet",
+    "id": 61627,
+    "effect": "Skills Chain +1 times&#10;Projectiles have 30% chance to be able to Chain when colliding with terrain"
+  },
   { "notable": "Righteous Providence", "id": 53884 },
   {
     "notable": "Rite of Ruin",
@@ -369,7 +397,11 @@
     "id": 52575,
     "effect": "20% more Area of Effect while wielding a Mace or Sceptre&#10;30% more Damage with Hits and Ailments against Enemies that are on Low Life while you are wielding an Axe&#10;25% more Accuracy Rating while wielding a Sword&#10;20% of Leech is Instant while wielding a Claw&#10;20% more Critical Strike Chance while wielding a Dagger"
   },
-  { "notable": "Wind Ward", "id": 23169 },
+  {
+    "notable": "Wind Ward",
+    "id": 23169,
+    "effect": "4% less Damage taken per Gale Force&#10;Lose all Gale Force when Hit"
+  },
   { "notable": "Withering Presence", "id": 25309 },
   {
     "notable": "Worthy Causes",
