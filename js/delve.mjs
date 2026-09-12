@@ -347,10 +347,13 @@ const main = async () => {
       }
       const expectedValue = item.chaosValue * drop.chance;
       totalExpectedValue = totalExpectedValue + item.chaosValue * drop.chance;
+      const itemWikiUrl = `https://www.poewiki.net/wiki/${
+        encodeURI(drop.item.replace(/ /g, "_"))
+      }`;
       drops.push({
         chaosValue: item.chaosValue,
         expectedValue,
-        line: `${drop.item} | ${
+        line: `[${drop.item}](${itemWikiUrl}) | ${
           (drop.chance * 100).toFixed(0)
         }% | ${item.chaosValue}c`,
       });
