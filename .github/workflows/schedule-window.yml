@@ -10,9 +10,6 @@ permissions:
   actions: write
 
 env:
-  WINDOW_WORKFLOW: league-start.yml
-  OFF_WINDOW_WORKFLOW: normal.yml
-  WINDOW_START: '2026-07-25'
   WINDOW_END: '2026-07-28'
 
 jobs:

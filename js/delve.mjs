@@ -117,28 +117,38 @@ const bosses = [
         item: "Cerberus Limb",
         chance: 0.6,
         type: "UniqueWeapon",
+        fallbackChaos: 0,
       },
       {
         item: "Doryani's Machinarium",
         chance: 0.16,
         type: "UniqueMap",
+        fallbackChaos: 100,
       },
       {
         item: "Ahkeli's Mountain",
         chance: 0.08,
         type: "UniqueAccessory",
+        fallbackChaos: 20,
       },
       {
         item: "Uzaza's Meadow",
         chance: 0.08,
         type: "UniqueAccessory",
+        fallbackChaos: 300,
       },
       {
         item: "Putembo's Valley",
         chance: 0.08,
         type: "UniqueAccessory",
+        fallbackChaos: 35,
       },
-      { item: "Curiosity", chance: 0.4, type: "UniqueJewel" },
+      {
+        item: "Curiosity",
+        chance: 0.4,
+        type: "UniqueJewel",
+        fallbackChaos: 100,
+      },
     ],
   },
   {
@@ -151,34 +161,45 @@ const bosses = [
         item: "Hale Negator",
         chance: 0.5,
         type: "UniqueArmour",
+        fallbackChaos: 1,
         notes: "1 socket 40%, 2 socket 10%",
       },
       {
         item: "Command of the Pit",
         chance: 0.2,
         type: "UniqueArmour",
+        fallbackChaos: 2,
         notes: "1 socket 15%, 2 socket 5%",
       },
       {
         item: "Ahkeli's Valley",
         chance: 0.1,
         type: "UniqueAccessory",
+        fallbackChaos: 15,
       },
       {
         item: "Uzaza's Mountain",
         chance: 0.1,
         type: "UniqueAccessory",
+        fallbackChaos: 140,
       },
       {
         item: "Putembo's Meadow",
         chance: 0.1,
         type: "UniqueAccessory",
+        fallbackChaos: 20,
       },
-      { item: "Misery in Darkness", chance: 0.2, type: "DivinationCard" },
+      {
+        item: "Misery in Darkness",
+        chance: 0.2,
+        type: "DivinationCard",
+        fallbackChaos: 0,
+      },
       {
         item: "Zorath's Eye of the Inevitable",
         chance: 0.5,
         type: "Fragment",
+        fallbackChaos: 1500,
       },
     ],
   },
@@ -188,27 +209,41 @@ const bosses = [
     node: "The Crystal King's Throne",
     image: "50px-The_Crystal_King's_Throne_delve_node_icon.png",
     drops: [
-      { item: "Aul's Uprising", chance: 0.61, type: "UniqueAccessory" },
-      { item: "Crown of the Tyrant", chance: 0.15, type: "UniqueArmour" },
+      {
+        item: "Aul's Uprising",
+        chance: 0.61,
+        type: "UniqueAccessory",
+        fallbackChaos: 5,
+      },
+      {
+        item: "Crown of the Tyrant",
+        chance: 0.15,
+        type: "UniqueArmour",
+        fallbackChaos: 2000,
+      },
       {
         item: "Ahkeli's Meadow",
         chance: 0.08,
         type: "UniqueAccessory",
+        fallbackChaos: 80,
       },
       {
         item: "Uzaza's Valley",
         chance: 0.08,
         type: "UniqueAccessory",
+        fallbackChaos: 10000,
       },
       {
         item: "Putembo's Mountain",
         chance: 0.08,
         type: "UniqueAccessory",
+        fallbackChaos: 1500,
       },
       {
         item: "Luminous Trove",
         chance: 0.16,
         type: "DivinationCard",
+        fallbackChaos: 310,
       },
     ],
   },
@@ -342,20 +377,18 @@ const main = async () => {
       );
 
       const item = getItemByName(drop.item);
-      if (!item) {
-        assert(false, `no item: ${JSON.stringify(drop, null, 2)}`);
-      }
-      const expectedValue = item.chaosValue * drop.chance;
-      totalExpectedValue = totalExpectedValue + item.chaosValue * drop.chance;
+      const chaosValue = item?.chaosValue || drop.fallbackChaos;
+      const expectedValue = chaosValue * drop.chance;
+      totalExpectedValue = totalExpectedValue + chaosValue * drop.chance;
       const itemWikiUrl = `https://www.poewiki.net/wiki/${
         encodeURI(drop.item.replace(/ /g, "_"))
       }`;
       drops.push({
-        chaosValue: item.chaosValue,
+        chaosValue: chaosValue,
         expectedValue,
         line: `[${drop.item}](${itemWikiUrl}) | ${
           (drop.chance * 100).toFixed(0)
-        }% | ${item.chaosValue}c`,
+        }% | ${chaosValue}c`,
       });
     }
 
