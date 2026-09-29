@@ -26,17 +26,11 @@ jobs:
           today=$(date -u +%F)
 
           # ISO-8601 dates compare correctly as plain strings, so no date maths
-          if [[ ! "$today" < "$WINDOW_START" && ! "$today" > "$WINDOW_END" ]]; then
-            enabled=$WINDOW_WORKFLOW
-            disabled=$OFF_WINDOW_WORKFLOW
+          if [[ "$today" > "$WINDOW_END" ]]; then
+            # outside of league start
+            echo "$today is after $WINDOW_END disabling league start workflow"
+            gh workflow disable league-start.yml -R "$GITHUB_REPOSITORY" || true
+            echo "done"
           else
-            enabled=$OFF_WINDOW_WORKFLOW
-            disabled=$WINDOW_WORKFLOW
+            echo "nothing to do"
           fi
-
-          echo "$today -> enable $enabled, disable $disabled"
-          # Disable first so a slow pair of API calls never leaves both schedules live
-          gh workflow disable "$disabled" -R "$GITHUB_REPOSITORY" || true
-          echo "1/2"
-          gh workflow enable  "$enabled"  -R "$GITHUB_REPOSITORY" || true
-          echo "2/2"
