@@ -143,29 +143,11 @@ const main = async () => {
   );
 
   const redBeasts = await getBeastsJson(beastNames);
-  const redBeastNames = redBeasts.map((r) => r.beast);
-
-  const yellowBeastsPrices = [];
-  const redBeastPrices = [];
-  for (let i = 0; i < resJson.lines.length; i++) {
-    const beast = resJson.lines[i];
-
-    if (redBeastNames.includes(beast.name)) {
-      redBeastPrices.push(beast);
-    } else {
-      yellowBeastsPrices.push(beast);
-    }
-  }
-
+  const redBeastPrices = [...resJson.lines];
   redBeastPrices.sort((a, b) => b.chaosValue - a.chaosValue);
-  yellowBeastsPrices.sort((a, b) => b.chaosValue - a.chaosValue);
-  const yellowBeastMedian =
-    yellowBeastsPrices[Math.floor(yellowBeastsPrices.length / 2)].chaosValue;
 
-  const redBeastThresholdUpper = yellowBeastMedian * 2;
-  const redBeastThresholdLower = yellowBeastMedian;
-
-  lines.push(`Yellow Beasts: ${yellowBeastMedian}c`, "");
+  const redBeastThresholdUpper = 10;
+  const redBeastThresholdLower = 2;
 
   const expensiveBeasts = redBeastPrices.filter((r) =>
     r.chaosValue >= redBeastThresholdUpper
