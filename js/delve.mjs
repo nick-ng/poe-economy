@@ -371,10 +371,21 @@ const main = async () => {
     for (let j = 0; j < boss.drops.length; j++) {
       const drop = boss.drops[j];
 
-      const getItemByName = await getPoeNinjaItemFetcherByName(
-        league.name,
-        drop.type,
-      );
+      let getItemByName = null;
+      try {
+        getItemByName = await getPoeNinjaItemFetcherByName(
+          league.name,
+          drop.type,
+        );
+      } catch (err) {
+        lines.push(
+          "# Error",
+          `error fetching league: ${league?.name}, drop type: ${drop?.type}`,
+          err.toString(),
+        );
+        await writeFile(join("wiki-temp", "Delve.md"), lines.join("\n"));
+        return;
+      }
 
       const item = getItemByName(drop.item);
       const chaosValue = item?.chaosValue || drop.fallbackChaos;
