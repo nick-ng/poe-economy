@@ -295,13 +295,13 @@ const main = async () => {
 
   const pricedResonators = resonators.map((resonator) => {
     const rPoeNinja = resonatorsPoeNinja[resonator.id];
-    const azuritePerChaos = resonator.azurite / rPoeNinja.primaryValue;
+    const azuritePerChaos = resonator.azurite / (rPoeNinja?.primaryValue || 1);
     return {
       ...resonator,
-      chaosValue: rPoeNinja.primaryValue,
+      chaosValue: rPoeNinja?.primaryValue || 1,
       azuritePerChaos,
       tableLine: `${resonator.display} | ${
-        rPoeNinja.primaryValue.toFixed(1)
+        (rPoeNinja?.primaryValue || 1).toFixed(1)
       }c | ${azuritePerChaos > 0 ? azuritePerChaos.toFixed(1) : "-"}`,
     };
   }).sort((a, b) => a.azuritePerChaos - b.azuritePerChaos);
@@ -319,7 +319,7 @@ const main = async () => {
     const averageFossilValue = biome.fossils.reduce((prev, curr) => {
       const fossilP = fossilsPoeNinja[`${curr}-fossil`];
 
-      return prev + fossilP.primaryValue / biome.fossils.length;
+      return prev + (fossilP?.primaryValue || 1) / biome.fossils.length;
     }, 0);
 
     const imageUrl =
@@ -333,8 +333,8 @@ const main = async () => {
         fossilsPoeNinja[`${biome.specialFossil.fossil}-fossil`];
       tableParts.push(
         biome.specialFossil.nodeName,
-        specialFossil.name,
-        `${specialFossil.primaryValue.toFixed(1)}c`,
+        specialFossil?.name || "??",
+        `${(specialFossil?.primaryValue || 1).toFixed(1)}c`,
       );
     } else {
       tableParts.push("-", "-", "-");

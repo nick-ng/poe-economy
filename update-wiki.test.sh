@@ -8,7 +8,8 @@ mkdir -p ./js/temp
 mkdir -p ./wiki-temp
 
 node ./js/lab-gems.mjs
-node ./js/beasts.mjs
+# node ./js/beasts.mjs
 node ./js/forbidden-jewels.mjs
+node ./js/delve.mjs
 
 echo "Test: Published wiki"
