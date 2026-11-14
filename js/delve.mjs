@@ -8,7 +8,10 @@ import {
   getPoeNinjaItemFetcherByName,
 } from "./poe-ninja.mjs";
 
-const lines = [];
+const lines = [
+  "# Delve",
+  "",
+];
 
 const biomes = [
   {
@@ -250,168 +253,171 @@ const bosses = [
 ];
 
 const main = async () => {
-  const league = await getLeague();
+  try {
+    const league = await getLeague();
 
-  const fossilJson = await fetchPoeNinjaItems(
-    league.name,
-    "Fossil",
-  );
-  const fossilsPoeNinja = fossilJson.lines.reduce((prev, l) => {
-    const item = fossilJson.items.find((i) => i.id === l.id);
-    if (!item) {
-      console.warn(`couldn't find item for ${l.id}`, l);
+    const fossilJson = await fetchPoeNinjaItems(
+      league.name,
+      "Fossil",
+    );
+    const fossilsPoeNinja = fossilJson.lines.reduce((prev, l) => {
+      const item = fossilJson.items.find((i) => i.id === l.id);
+      if (!item) {
+        console.warn(`couldn't find item for ${l.id}`, l);
+        return prev;
+      }
+
+      prev[l.id] = { ...l, name: item.name || l.id };
+
       return prev;
-    }
+    }, {});
 
-    prev[l.id] = { ...l, name: item.name || l.id };
+    const resonatorJson = await fetchPoeNinjaItems(
+      league.name,
+      "Resonator",
+    );
+    const resonatorsPoeNinja = resonatorJson.lines.reduce((prev, l) => {
+      const item = resonatorJson.items.find((i) => i.id === l.id);
+      if (!item) {
+        console.warn(`couldn't find item for ${l.id}`, l);
+        return prev;
+      }
 
-    return prev;
-  }, {});
+      prev[l.id] = { ...l, name: item.name || l.id };
 
-  const resonatorJson = await fetchPoeNinjaItems(
-    league.name,
-    "Resonator",
-  );
-  const resonatorsPoeNinja = resonatorJson.lines.reduce((prev, l) => {
-    const item = resonatorJson.items.find((i) => i.id === l.id);
-    if (!item) {
-      console.warn(`couldn't find item for ${l.id}`, l);
       return prev;
-    }
+    }, {});
 
-    prev[l.id] = { ...l, name: item.name || l.id };
-
-    return prev;
-  }, {});
-
-  lines.push(
-    "# Delve",
-    "",
-    `[${league.name} League](https://poe.ninja/poe1/economy/${league.url}/fossils), fetched at ${new Date()}`,
-    "",
-    "[poewiki](https://www.poewiki.net/wiki/Delve)",
-    "",
-  );
-
-  const pricedResonators = resonators.map((resonator) => {
-    const rPoeNinja = resonatorsPoeNinja[resonator.id];
-    const azuritePerChaos = resonator.azurite / (rPoeNinja?.primaryValue || 1);
-    return {
-      ...resonator,
-      chaosValue: rPoeNinja?.primaryValue || 1,
-      azuritePerChaos,
-      tableLine: `${resonator.display} | ${
-        (rPoeNinja?.primaryValue || 1).toFixed(1)
-      }c | ${azuritePerChaos > 0 ? azuritePerChaos.toFixed(1) : "-"}`,
-    };
-  }).sort((a, b) => a.azuritePerChaos - b.azuritePerChaos);
-
-  lines.push(
-    "## Resonators",
-    "",
-    "Resonator | Chaos | Azurite / Chaos",
-    ":- | -: | -:",
-    ...pricedResonators.map((resonator) => resonator.tableLine),
-    "",
-  );
-
-  const pricedBiomes = biomes.map((biome) => {
-    const averageFossilValue = biome.fossils.reduce((prev, curr) => {
-      const fossilP = fossilsPoeNinja[`${curr}-fossil`];
-
-      return prev + (fossilP?.primaryValue || 1) / biome.fossils.length;
-    }, 0);
-
-    const imageUrl =
-      `https://raw.githubusercontent.com/nick-ng/poe-economy/refs/heads/main/images/${biome.image}`;
-    let tableParts = [
-      `![${biome.name}](${imageUrl} "${biome.name}")`,
-      `${averageFossilValue.toFixed(1)}c`,
-    ];
-    if (biome.specialFossil) {
-      const specialFossil =
-        fossilsPoeNinja[`${biome.specialFossil.fossil}-fossil`];
-      tableParts.push(
-        biome.specialFossil.nodeName,
-        specialFossil?.name || "??",
-        `${(specialFossil?.primaryValue || 1).toFixed(1)}c`,
-      );
-    } else {
-      tableParts.push("-", "-", "-");
-    }
-
-    return { ...biome, averageFossilValue, tableLine: tableParts.join(" | ") };
-  }).sort((a, b) => a.depth - b.depth);
-
-  lines.push(
-    "## Biomes",
-    "",
-    "Biome | Average Fossil | Exclusive Node | Exclusive Fossil | Exclusive Price",
-    ":- | -: | :- | :- | -:",
-    ...pricedBiomes.map((biome) => biome.tableLine),
-    "",
-  );
-
-  lines.push("## Bosses", "");
-
-  for (let i = 0; i < bosses.length; i++) {
-    const boss = bosses[i];
-
-    const bossImageUrl =
-      `https://raw.githubusercontent.com/nick-ng/poe-economy/refs/heads/main/images/${boss.image}`;
     lines.push(
-      `### [${boss.boss}](${boss.wikiUrl} "${boss.boss}")`,
+      `[${league.name} League](https://poe.ninja/poe1/economy/${league.url}/fossils), fetched at ${new Date()}`,
       "",
-      `![${boss.boss}](${bossImageUrl})`,
+      "[poewiki](https://www.poewiki.net/wiki/Delve)",
       "",
     );
 
-    let totalExpectedValue = 0;
-    const drops = [];
-    for (let j = 0; j < boss.drops.length; j++) {
-      const drop = boss.drops[j];
+    const pricedResonators = resonators.map((resonator) => {
+      const rPoeNinja = resonatorsPoeNinja[resonator.id];
+      const azuritePerChaos = resonator.azurite /
+        (rPoeNinja?.primaryValue || 1);
+      return {
+        ...resonator,
+        chaosValue: rPoeNinja?.primaryValue || 1,
+        azuritePerChaos,
+        tableLine: `${resonator.display} | ${
+          (rPoeNinja?.primaryValue || 1).toFixed(1)
+        }c | ${azuritePerChaos > 0 ? azuritePerChaos.toFixed(1) : "-"}`,
+      };
+    }).sort((a, b) => a.azuritePerChaos - b.azuritePerChaos);
 
-      let getItemByName = null;
-      try {
-        getItemByName = await getPoeNinjaItemFetcherByName(
+    lines.push(
+      "## Resonators",
+      "",
+      "Resonator | Chaos | Azurite / Chaos",
+      ":- | -: | -:",
+      ...pricedResonators.map((resonator) => resonator.tableLine),
+      "",
+    );
+
+    const pricedBiomes = biomes.map((biome) => {
+      const averageFossilValue = biome.fossils.reduce((prev, curr) => {
+        const fossilP = fossilsPoeNinja[`${curr}-fossil`];
+
+        return prev + (fossilP?.primaryValue || 1) / biome.fossils.length;
+      }, 0);
+
+      const imageUrl =
+        `https://raw.githubusercontent.com/nick-ng/poe-economy/refs/heads/main/images/${biome.image}`;
+      let tableParts = [
+        `![${biome.name}](${imageUrl} "${biome.name}")`,
+        `${averageFossilValue.toFixed(1)}c`,
+      ];
+      if (biome.specialFossil) {
+        const specialFossil =
+          fossilsPoeNinja[`${biome.specialFossil.fossil}-fossil`];
+        tableParts.push(
+          biome.specialFossil.nodeName,
+          specialFossil?.name || "??",
+          `${(specialFossil?.primaryValue || 1).toFixed(1)}c`,
+        );
+      } else {
+        tableParts.push("-", "-", "-");
+      }
+
+      return {
+        ...biome,
+        averageFossilValue,
+        tableLine: tableParts.join(" | "),
+      };
+    }).sort((a, b) => a.depth - b.depth);
+
+    lines.push(
+      "## Biomes",
+      "",
+      "Biome | Average Fossil | Exclusive Node | Exclusive Fossil | Exclusive Price",
+      ":- | -: | :- | :- | -:",
+      ...pricedBiomes.map((biome) => biome.tableLine),
+      "",
+    );
+
+    lines.push("## Bosses", "");
+
+    for (let i = 0; i < bosses.length; i++) {
+      const boss = bosses[i];
+
+      const bossImageUrl =
+        `https://raw.githubusercontent.com/nick-ng/poe-economy/refs/heads/main/images/${boss.image}`;
+      lines.push(
+        `### [${boss.boss}](${boss.wikiUrl} "${boss.boss}")`,
+        "",
+        `![${boss.boss}](${bossImageUrl})`,
+        "",
+      );
+
+      let totalExpectedValue = 0;
+      const drops = [];
+      for (let j = 0; j < boss.drops.length; j++) {
+        const drop = boss.drops[j];
+
+        const getItemByName = await getPoeNinjaItemFetcherByName(
           league.name,
           drop.type,
         );
-      } catch (err) {
-        lines.push(
-          "# Error",
-          `error fetching league: ${league?.name}, drop type: ${drop?.type}`,
-          err.toString(),
-        );
-        await writeFile(join("wiki-temp", "Delve.md"), lines.join("\n"));
-        return;
+
+        const item = getItemByName(drop.item);
+        const chaosValue = item?.chaosValue || drop.fallbackChaos;
+        const expectedValue = chaosValue * drop.chance;
+        totalExpectedValue = totalExpectedValue + chaosValue * drop.chance;
+        const itemWikiUrl = `https://www.poewiki.net/wiki/${
+          encodeURI(drop.item.replace(/ /g, "_"))
+        }`;
+        drops.push({
+          chaosValue: chaosValue,
+          expectedValue,
+          line: `[${drop.item}](${itemWikiUrl}) | ${
+            (drop.chance * 100).toFixed(0)
+          }% | ${chaosValue}c`,
+        });
       }
 
-      const item = getItemByName(drop.item);
-      const chaosValue = item?.chaosValue || drop.fallbackChaos;
-      const expectedValue = chaosValue * drop.chance;
-      totalExpectedValue = totalExpectedValue + chaosValue * drop.chance;
-      const itemWikiUrl = `https://www.poewiki.net/wiki/${
-        encodeURI(drop.item.replace(/ /g, "_"))
-      }`;
-      drops.push({
-        chaosValue: chaosValue,
-        expectedValue,
-        line: `[${drop.item}](${itemWikiUrl}) | ${
-          (drop.chance * 100).toFixed(0)
-        }% | ${chaosValue}c`,
-      });
-    }
+      drops.sort((a, b) => b.chaosValue - a.chaosValue);
 
-    drops.sort((a, b) => b.chaosValue - a.chaosValue);
+      lines.push(
+        `Expected Value: ${totalExpectedValue.toFixed(1)}c`,
+        "",
+        "Item | Chance | Price",
+        ":- | -: | -:",
+        ...drops.map((d) => d.line),
+        "",
+      );
+    }
+  } catch (err) {
+    console.error("Error in delve.mjs");
 
     lines.push(
-      `Expected Value: ${totalExpectedValue.toFixed(1)}c`,
-      "",
-      "Item | Chance | Price",
-      ":- | -: | -:",
-      ...drops.map((d) => d.line),
-      "",
+      "## Error",
+      "```",
+      err.toString(),
+      "```",
     );
   }
 

@@ -3,7 +3,10 @@ import { join } from "path";
 
 import { fetchPoeNinjaItems, getLeague } from "./poe-ninja.mjs";
 
-const lines = [];
+const lines = [
+  "# Beasts",
+  "",
+];
 
 // this is designed to be run from the repo's root with `node ./js/beasts.mjs`
 const BEASTS_JSON_PATH = join("js", "generated", "beasts.json");
@@ -131,94 +134,103 @@ const getBeastSubsections = (beasts, redBeasts, message) => {
 };
 
 const main = async () => {
-  const league = await getLeague();
-  const resJson = await fetchPoeNinjaItems(league.name, "Beast");
-  const beastNames = resJson.lines.map((a) => a.name);
+  try {
+    const league = await getLeague();
+    const resJson = await fetchPoeNinjaItems(league.name, "Beast");
+    const beastNames = resJson.lines.map((a) => a.name);
 
-  lines.push(
-    "# Beasts",
-    "",
-    `[${league.name} League](https://poe.ninja/poe1/economy/${league.url}/beasts), fetched at ${new Date()}`,
-    "",
-  );
-
-  const redBeasts = await getBeastsJson(beastNames);
-  const redBeastPrices = [...resJson.lines];
-  redBeastPrices.sort((a, b) => b.chaosValue - a.chaosValue);
-
-  const redBeastThresholdUpper = 10;
-  const redBeastThresholdLower = 2;
-
-  const expensiveBeasts = redBeastPrices.filter((r) =>
-    r.chaosValue >= redBeastThresholdUpper
-  );
-  if (expensiveBeasts.length > 0) {
-    const expensiveHighPrice = expensiveBeasts[0].chaosValue;
-    const expensiveLowPrice =
-      expensiveBeasts[expensiveBeasts.length - 1].chaosValue;
-    const expensivePriceString = expensiveHighPrice === expensiveLowPrice
-      ? `${expensiveHighPrice}c`
-      : `${expensiveLowPrice}c - ${expensiveHighPrice}c`;
-
-    lines.push(...getBeastSubsections(
-      expensiveBeasts,
-      redBeasts,
-      `\n## Keep (${expensivePriceString})`,
-    ));
-  } else {
     lines.push(
-      "\n## Keep",
-      "",
-      "There are no worthy beasts",
+      `[${league.name} League](https://poe.ninja/poe1/economy/${league.url}/beasts), fetched at ${new Date()}`,
       "",
     );
-  }
 
-  const borderlineBeasts = redBeastPrices.filter((r) =>
-    r.chaosValue < redBeastThresholdUpper &&
-    r.chaosValue >= redBeastThresholdLower
-  );
-  if (borderlineBeasts.length > 0) {
-    const borderLineHighPrice = borderlineBeasts[0].chaosValue;
-    const borderLineLowPrice =
-      borderlineBeasts[borderlineBeasts.length - 1].chaosValue;
-    const borderLinePriceString = borderLineHighPrice === borderLineLowPrice
-      ? `${borderLineHighPrice}c`
-      : `${borderLineLowPrice}c - ${borderLineHighPrice}c`;
-    lines.push(...getBeastSubsections(
-      borderlineBeasts,
-      redBeasts,
-      `\n## Borderline (${borderLinePriceString})`,
-    ));
-  } else {
-    lines.push(
-      "\n## Borderline",
-      "",
-      "There are no worthy beasts",
-      "",
+    const redBeasts = await getBeastsJson(beastNames);
+    const redBeastPrices = [...resJson.lines];
+    redBeastPrices.sort((a, b) => b.chaosValue - a.chaosValue);
+
+    const redBeastThresholdUpper = 10;
+    const redBeastThresholdLower = 2;
+
+    const expensiveBeasts = redBeastPrices.filter((r) =>
+      r.chaosValue >= redBeastThresholdUpper
     );
-  }
+    if (expensiveBeasts.length > 0) {
+      const expensiveHighPrice = expensiveBeasts[0].chaosValue;
+      const expensiveLowPrice =
+        expensiveBeasts[expensiveBeasts.length - 1].chaosValue;
+      const expensivePriceString = expensiveHighPrice === expensiveLowPrice
+        ? `${expensiveHighPrice}c`
+        : `${expensiveLowPrice}c - ${expensiveHighPrice}c`;
 
-  const cheapBeasts = redBeastPrices.filter((r) =>
-    r.chaosValue < redBeastThresholdLower
-  );
-  if (cheapBeasts.length > 0) {
-    const cheapHighPrice = cheapBeasts[0].chaosValue;
-    const cheapLowPrice = cheapBeasts[cheapBeasts.length - 1].chaosValue;
-    const cheapPriceString = cheapHighPrice === cheapLowPrice
-      ? `${cheapHighPrice}c`
-      : `${cheapLowPrice}c - ${cheapHighPrice}c`;
-    lines.push(...getBeastSubsections(
-      cheapBeasts,
-      redBeasts,
-      `\n## Trash (${cheapPriceString})`,
-    ));
-  } else {
+      lines.push(...getBeastSubsections(
+        expensiveBeasts,
+        redBeasts,
+        `\n## Keep (${expensivePriceString})`,
+      ));
+    } else {
+      lines.push(
+        "\n## Keep",
+        "",
+        "There are no worthy beasts",
+        "",
+      );
+    }
+
+    const borderlineBeasts = redBeastPrices.filter((r) =>
+      r.chaosValue < redBeastThresholdUpper &&
+      r.chaosValue >= redBeastThresholdLower
+    );
+    if (borderlineBeasts.length > 0) {
+      const borderLineHighPrice = borderlineBeasts[0].chaosValue;
+      const borderLineLowPrice =
+        borderlineBeasts[borderlineBeasts.length - 1].chaosValue;
+      const borderLinePriceString = borderLineHighPrice === borderLineLowPrice
+        ? `${borderLineHighPrice}c`
+        : `${borderLineLowPrice}c - ${borderLineHighPrice}c`;
+      lines.push(...getBeastSubsections(
+        borderlineBeasts,
+        redBeasts,
+        `\n## Borderline (${borderLinePriceString})`,
+      ));
+    } else {
+      lines.push(
+        "\n## Borderline",
+        "",
+        "There are no worthy beasts",
+        "",
+      );
+    }
+
+    const cheapBeasts = redBeastPrices.filter((r) =>
+      r.chaosValue < redBeastThresholdLower
+    );
+    if (cheapBeasts.length > 0) {
+      const cheapHighPrice = cheapBeasts[0].chaosValue;
+      const cheapLowPrice = cheapBeasts[cheapBeasts.length - 1].chaosValue;
+      const cheapPriceString = cheapHighPrice === cheapLowPrice
+        ? `${cheapHighPrice}c`
+        : `${cheapLowPrice}c - ${cheapHighPrice}c`;
+      lines.push(...getBeastSubsections(
+        cheapBeasts,
+        redBeasts,
+        `\n## Trash (${cheapPriceString})`,
+      ));
+    } else {
+      lines.push(
+        "\n## Trash",
+        "",
+        "There are no worthy beasts",
+        "",
+      );
+    }
+  } catch (err) {
+    console.error("Error in beasts.mjs");
+
     lines.push(
-      "\n## Trash",
-      "",
-      "There are no worthy beasts",
-      "",
+      "## Error",
+      "```",
+      err.toString(),
+      "```",
     );
   }
 
